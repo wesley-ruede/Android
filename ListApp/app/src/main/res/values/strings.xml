@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">List App</string>
+
+    <!-- adding a string-array for items in the list views -->
+    <string-array name="items">
+        <item>peach</item>
+        <item>tomato</item>
+        <item>squash</item>
+    </string-array>
+
+    <!-- a string array with prices in relation to the items string-array -->
+    <string-array name="prices">
+        <item>$0.99</item>
+        <item>$1.49</item>
+        <item>$0.89</item>
+    </string-array>
+
+    <!-- a string array with descriptions in relation to the items string-array -->
+    <string-array name="descriptions">
+        <item>Fresh peaches from Georgia</item>
+        <item>Fresh salad tomatoes c from Ohio</item>
+        <item>Fresh yellow squash from California </item>
+    </string-array>
+
+</resources>
+
+
