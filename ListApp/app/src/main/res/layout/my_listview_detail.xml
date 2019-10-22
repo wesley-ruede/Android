@@ -9,9 +9,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="49dp"
-        android:layout_marginLeft="49dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="43dp"
         android:text="Name"
         android:textSize="24sp" />
 
@@ -22,10 +22,11 @@
         android:layout_below="@+id/nameTextView"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="46dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="4dp"
-        android:text="Description" />
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="7dp"
+        android:text="Description"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/priceTextView"
@@ -34,13 +35,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="141dp"
-        android:layout_marginLeft="141dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginRight="103dp"
-        android:layout_toEndOf="@+id/nameTextView"
-        android:layout_toRightOf="@+id/nameTextView"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
         android:text="Price"
         android:textSize="24sp" />
 </RelativeLayout>

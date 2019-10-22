@@ -38,5 +38,12 @@ public class MainActivity extends AppCompatActivity {
         // the resources in res of descriptions
         descriptions = res.getStringArray(R.array.descriptions);
 
+        // create a reference to the ItemAdapter which requires a context
+        // and 3 string arrays
+        ItemAdapter itemAdapter = new ItemAdapter(this, items, prices, descriptions);
+        // using the ItemAdapter by setting the ItemAdapter to the ListView
+        myListView.setAdapter(itemAdapter);
+
+        // ListView is populating with arrays and constraints have been adjusted
     }
 }
