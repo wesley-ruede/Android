@@ -18,7 +18,7 @@
     <!-- a string array with descriptions in relation to the items string-array -->
     <string-array name="descriptions">
         <item>Fresh peaches from Georgia</item>
-        <item>Fresh salad tomatoes c from Ohio</item>
+        <item>Fresh salad tomatoes from Ohio</item>
         <item>Fresh yellow squash from California </item>
     </string-array>
 
