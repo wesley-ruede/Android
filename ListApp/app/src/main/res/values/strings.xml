@@ -8,7 +8,9 @@
         <item>squash</item>
     </string-array>
 
-    <!-- a string array with prices in relation to the items string-array -->
+    <!-- A string array with prices set to the field variable in MainActivity
+     as String[] prices. This will allow the str type data to be referenced
+       and passed through the project as objects -->
     <string-array name="prices">
         <item>$0.99</item>
         <item>$1.49</item>
@@ -23,5 +25,3 @@
     </string-array>
 
 </resources>
-
-
