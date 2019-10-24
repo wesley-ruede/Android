@@ -75,16 +75,16 @@ public class DetailActivity extends AppCompatActivity {
             int ratio = Math.round( (float)imgWidth / (float)screenWidth );
             // set sample size of the BitmpFactory based on ratio
             options.inSampleSize = ratio;
-            // turn off inJustDecodeBounds
-            options.inJustDecodeBounds = false;
-            // create a new Bitmap of the scaled image from the pic parameter
-            // that has been passed in and and get the resources by calling
-            // decodeBitmap on the BitmapFactory instance
-            Bitmap scaledImg = BitmapFactory.decodeResource(getResources(), pic, options);
-            // finally tke the image and set it to the scaled image
-            img.setImageBitmap(scaledImg);
-
         }
+
+        // turn off inJustDecodeBounds
+        options.inJustDecodeBounds = false;
+        // create a new Bitmap of the scaled image from the pic parameter
+        // that has been passed in and and get the resources by calling
+        // decodeBitmap on the BitmapFactory instance
+        Bitmap scaledImg = BitmapFactory.decodeResource(getResources(), pic, options);
+        // finally tke the image and set it to the scaled image
+        img.setImageBitmap(scaledImg);
 
     }
 }
