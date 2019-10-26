@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "367400551703",
+    "firebase_url": "https://loginlogout-7e575.firebaseio.com",
+    "project_id": "loginlogout-7e575",
+    "storage_bucket": "loginlogout-7e575.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367400551703:android:1fd086df42038f38446352",
+        "android_client_info": {
+          "package_name": "com.wesleyruede.loginlogout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367400551703-0p1httqtnvsdc4g5ncphpq6a8mlcgd9b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wesleyruede.loginlogout",
+            "certificate_hash": "4667443e1e646cc6af5d11ca85c964cd0a08ce07"
+          }
+        },
+        {
+          "client_id": "367400551703-53jdl8uok6ie9t9nk44bg4h7hfktu47l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtx7Lk80CKEqssk2GiegxFMSTdVKcsy68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367400551703-53jdl8uok6ie9t9nk44bg4h7hfktu47l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
