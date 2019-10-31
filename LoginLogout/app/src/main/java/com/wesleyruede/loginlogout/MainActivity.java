@@ -8,6 +8,8 @@ package com.wesleyruede.loginlogout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private String current_user_id;
+    private Button signout;
 
     // if user is logged in then do nothing
     @Override
@@ -41,6 +44,18 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         current_user_id = mAuth.getUid();
+
+        // when the signoutButton is pressed call signout on mAuth and send
+        // the user back to the login activity
+        signout = findViewById(R.id.signoutButton);
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                finish();
+            }
+        });
     }
 }
 
@@ -53,3 +68,5 @@ public class MainActivity extends AppCompatActivity {
 // added user credentials to Firebase email Authentication database
 // user successfully signed in with device
 // login complete -- 10/29/19
+// added create a user feature in SignupActivity with in activity_signup
+// create a user and logout finished 10/30/19
