@@ -15,13 +15,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.wesleyruede.loginlogout.authentication.LoginActivity;
+import com.wesleyruede.loginlogout.authentication.UserAccount;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    // A credential authentication database system by Google.
     private FirebaseAuth mAuth;
     private String current_user_id;
-    private Button signout;
+    private Button signout, user_account;
 
     // if user is logged in then do nothing
     @Override
@@ -48,12 +50,21 @@ public class MainActivity extends AppCompatActivity {
         // when the signoutButton is pressed call signout on mAuth and send
         // the user back to the login activity
         signout = findViewById(R.id.signoutButton);
+        user_account = findViewById(R.id.userAccount);
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mAuth.signOut();
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 finish();
+            }
+        });
+
+        // a method that send the user to the UserAccount activity
+        user_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, UserAccount.class));
             }
         });
     }
@@ -69,4 +80,4 @@ public class MainActivity extends AppCompatActivity {
 // user successfully signed in with device
 // login complete -- 10/29/19
 // added create a user feature in SignupActivity with in activity_signup
-// create a user and logout finished 10/30/19
+// created a user and logout finished 10/30/19
