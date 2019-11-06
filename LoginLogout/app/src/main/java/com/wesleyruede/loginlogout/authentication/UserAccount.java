@@ -21,8 +21,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -132,7 +132,7 @@ public class UserAccount extends AppCompatActivity {
                     compressor.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
                     byte[] thumb = byteArrayOutputStream.toByteArray();
 
-                    UploadTask image_path = storageReference.child("user_image").child(user_id+".jpg").putBytes(thumb);
+                    final UploadTask image_path = storageReference.child("user_image").child(user_id+".jpg").putBytes(thumb);
 //////////////////////////////////// the issue is that this application is assuming a best case scenario
                     //////////////// and the lack of a onFailureListener does not allow exceptions to be handled
                     image_path.addOnFailureListener(new OnFailureListener() {
@@ -140,11 +140,18 @@ public class UserAccount extends AppCompatActivity {
                         public void onFailure(@NonNull Exception e) {
                             e.printStackTrace();
 
-                        }
-                    }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        } // I used the wrong method. OnSuccessListener is not correct.
+                    }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                            if (task.isSuccessful()) {
 
+                                StoreData(task,
+                                        username,
+                                        useraddress,
+                                        userphone);
+
+                            }
                         }
                     });
 
@@ -156,7 +163,13 @@ public class UserAccount extends AppCompatActivity {
             }
         });
     }
-///////////////////////////////// -- is the storeUserData method needed?
+
+    private void StoreData(Task<UploadTask.TaskSnapshot> task, String username, String useraddress, String userphone) {
+
+    }
+
+
+    ///////////////////////////////// -- is the storeUserData method needed?
     private void storeUserData(Task<UploadTask.TaskSnapshot> task, String username, EditText userAddress, String userphone) {
         Uri download_uri;
     }
