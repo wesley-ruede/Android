@@ -21,7 +21,7 @@ import com.wesleyruede.loginlogout.R;
 public class SignupActivity extends AppCompatActivity {
 
     private EditText emailField, passwordField, passwordConfirm;
-    private Button register, signin;
+    private Button complete, signin;
 
     private FirebaseAuth mAuth;
 
@@ -34,8 +34,8 @@ public class SignupActivity extends AppCompatActivity {
         passwordField = findViewById(R.id.passwordField);
         passwordConfirm = findViewById(R.id.passwordConfirm);
 
-        register = findViewById(R.id.registerButton);
-        signin =findViewById(R.id.signinButton);
+        complete = findViewById(R.id.complete);
+        signin = findViewById(R.id.signinButton);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -49,7 +49,7 @@ public class SignupActivity extends AppCompatActivity {
         });
 
 
-        register.setOnClickListener(new View.OnClickListener() {
+        complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -85,6 +85,5 @@ public class SignupActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }

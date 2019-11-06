@@ -26,6 +26,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="Enter Password"
+        android:inputType="textVisiblePassword"
         android:textColor="#000"
         android:textStyle="bold"/>
 
@@ -36,17 +37,16 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:hint="Reenter Password"
+        android:hint="Confirm Password"
         android:inputType="textPassword"
         android:textColor="#000"
-        android:textStyle="bold"
-        android:autofillHints="" />
+        android:textStyle="bold" />
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/complete"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="Complete"
         android:textAllCaps="false"
         android:background="#000"
         android:textStyle="bold"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="#47B41E"
-        android:text="Already have an account"
+        android:text="Already have an account?"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textStyle="bold" />

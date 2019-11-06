@@ -34,11 +34,13 @@ dependencies {
     // SDKs for the Firebase to use FirebaseAuth and Firestore
     implementation 'com.google.firebase:firebase-auth:19.1.0'
     implementation 'com.google.firebase:firebase-firestore:21.2.1' // <-- updated for newer version
+    implementation 'com.google.firebase:firebase-storage:19.1.0' // <-- found missing dependency
     // required for multiDexEnabled true for API level 21 and below
     def multidex_version = "2.0.1"
     implementation "androidx.multidex:multidex:$multidex_version"
     // Android-Image-Cropper see: "https://github.com/ArthurHub/Android-Image-Cropper"
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'id.zelory:compressor:2.1.0'
 }
 
 // apply google-services Gradle plug to project level
