@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -36,6 +37,8 @@ import com.wesleyruede.loginlogout.R;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import id.zelory.compressor.Compressor;
 
@@ -59,6 +62,8 @@ public class UserAccount extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
     private StorageReference storageReference;
+    private UploadTask uploadTask;
+    private Uri download_uri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,17 +127,18 @@ public class UserAccount extends AppCompatActivity {
                                 .compressToBitmap(newFile);
 
 
-
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
 /////////////////////////////////// the compressed image  is now being encoded and created
-                        /////////// byte by byte in the thumb byte array
+                    /////////// byte by byte in the thumb byte array
                     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                    compressor.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+                    compressor.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
                     byte[] thumb = byteArrayOutputStream.toByteArray();
 
-                    final UploadTask image_path = storageReference.child("user_image").child(user_id+".jpg").putBytes(thumb);
+                    UploadTask image_path = storageReference.child("user_image").child(user_id + ".jpg").putBytes(thumb);
+                    final StorageReference ref = storageReference.child("user_image");
+                    uploadTask = ref.putBytes(thumb);
 //////////////////////////////////// the issue is that this application is assuming a best case scenario
                     //////////////// and the lack of a onFailureListener does not allow exceptions to be handled
                     image_path.addOnFailureListener(new OnFailureListener() {
@@ -140,41 +146,78 @@ public class UserAccount extends AppCompatActivity {
                         public void onFailure(@NonNull Exception e) {
                             e.printStackTrace();
 
-                        } // I used the wrong method. OnSuccessListener is not correct.
-                    }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                        } // I used the wrong method. OnSuccessListener is correct
+                    }).addOnCompleteListener(new OnCompleteListener<com.google.firebase.storage.UploadTask.TaskSnapshot>() {
                         @Override
-                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                        public void onComplete(@NonNull Task<com.google.firebase.storage.UploadTask.TaskSnapshot> task) {
+
+                            StoreData(task,
+                                    useraddress,
+                                    username,
+                                    userphone);
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+
+    // This is progress. Finally got somewhere with my efforts.
+    private void StoreData(Task<com.google.firebase.storage.UploadTask.TaskSnapshot> task, String useraddress, String username, String userphone) {
+
+        // needed new string data as it was declared final in
+        final String fusername = username;
+        final String fuserphone = userphone;
+        final String fuseraddress =  useraddress;
+        final StorageReference ref = storageReference.child("user_image");
+
+
+        // this is a necessary block for the getDownloadUrl() method and getResult() method. It also catches errors which is nice.
+        Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+            @Override
+            public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                if (!task.isSuccessful()) {
+                    throw task.getException();
+                }
+                return ref.getDownloadUrl();
+            }
+        }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+            @Override
+            public void onComplete(@NonNull Task<Uri> task) {
+                if (task.isSuccessful()) {
+
+                    // mapping data to a Firestore database
+                    download_uri = task.getResult();
+                    Map<String,String> userData = new HashMap<>();
+                    userData.put("userName",fusername);
+                    userData.put("userPhone", fuserphone);
+                    userData.put("userAddress", fuseraddress);
+                    userData.put("userImage", download_uri.toString());
+
+                    firebaseFirestore.collection("Users").document(user_id).set(userData).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+
                             if (task.isSuccessful()) {
 
-                                StoreData(task,
-                                        username,
-                                        useraddress,
-                                        userphone);
-
+                                progressDialog.dismiss();
+                                Toast.makeText(UserAccount.this,"Stored data successfully",Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
 
 
-                } else {
-                    Toast.makeText(UserAccount.this, "Fill all fields", Toast.LENGTH_SHORT).show();
-                }
 
+                } else {
+                    download_uri = imageUri;
+
+                }
             }
         });
-    }
-
-    private void StoreData(Task<UploadTask.TaskSnapshot> task, String username, String useraddress, String userphone) {
 
     }
-
-
-    ///////////////////////////////// -- is the storeUserData method needed?
-    private void storeUserData(Task<UploadTask.TaskSnapshot> task, String username, EditText userAddress, String userphone) {
-        Uri download_uri;
-    }
-////////////////////////////////// This method is now pointless, solved.
-                    ///////////// Or so I thought. Well that is enough for today.
+    // Technically this block is not throwing any errors but, I don't think it does what I want at the moment.
     // https://firebase.google.com/docs/storage/android/upload-files#get_a_download_url
 
     // choose and crop the image
