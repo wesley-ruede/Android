@@ -32,6 +32,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
+import com.wesleyruede.loginlogout.MainActivity;
 import com.wesleyruede.loginlogout.R;
 
 import java.io.ByteArrayOutputStream;
@@ -150,11 +151,21 @@ public class UserAccount extends AppCompatActivity {
                     }).addOnCompleteListener(new OnCompleteListener<com.google.firebase.storage.UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<com.google.firebase.storage.UploadTask.TaskSnapshot> task) {
+                            if(task.isSuccessful()){
 
-                            StoreData(task,
-                                    useraddress,
-                                    username,
-                                    userphone);
+                                StoreData(task,
+                                        useraddress,
+                                        username,
+                                        userphone);
+
+                            }else {
+                                String error = task.getException().getMessage();
+                                Toast.makeText(UserAccount.this,"Image Error"+error,Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
+
+                            }
+
+
                         }
                     });
                 }
@@ -165,7 +176,6 @@ public class UserAccount extends AppCompatActivity {
 
     // This is progress. Finally got somewhere with my efforts.
     private void StoreData(Task<com.google.firebase.storage.UploadTask.TaskSnapshot> task, String useraddress, String username, String userphone) {
-
         // needed new string data as it was declared final in
         final String fusername = username;
         final String fuserphone = userphone;
@@ -202,7 +212,11 @@ public class UserAccount extends AppCompatActivity {
                             if (task.isSuccessful()) {
 
                                 progressDialog.dismiss();
-                                Toast.makeText(UserAccount.this,"Stored data successfully",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(UserAccount.this,"Data successfully stored",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(UserAccount.this, MainActivity.class));
+
+                            } else {
+                                Toast.makeText(UserAccount.this,"Firestore error: "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -238,6 +252,7 @@ public class UserAccount extends AppCompatActivity {
 
             }else if (resultCode==CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();
+                Toast.makeText(UserAccount.this,"Cropped Image Error"+error,Toast.LENGTH_SHORT).show();
             }
         }
     }
