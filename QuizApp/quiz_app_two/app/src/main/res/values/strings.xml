@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="pq1">A variable is a place holder for data which we can use in our programs. We have <strong>four basic data types</strong> at our disposal in Python, <strong>integer, float, string, float.</strong> You can declare a new variable by using any of the given sequences of characters and more: x = 0, “hello world”, y = 2.5, z = True. Once the variable has been declared in the interpreter you can now call a function on it to see the literal value of the data.
+
+<br>You can declare a variable with this sequence of characters: x = 0</br></string>
+    <string name="pq2">To <strong>display the data on the screen</strong> we will call the print function as such: <strong>print()</strong>. Here we are passing data to the print function: print(“Hello everybody I\’m a string”). In turn the interpreter will then display a string on the screen.
+
+        You can display data on the screen with the print() function.</string>
+    <string name="pq3">To check if one value is exactly equal to the other we can use the “exactly equal” operator ==. For instance we could have two variables in our code; f = 960 and I = 349. We can use the print function to get the answer with sequence: print(f==I). This will display False, another type of data called a boolean value.
+
+To check if I is equal to f we can use the command type(f+I).</string>
+</resources>

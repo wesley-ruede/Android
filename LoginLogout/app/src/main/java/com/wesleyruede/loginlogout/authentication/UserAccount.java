@@ -131,8 +131,7 @@ public class UserAccount extends AppCompatActivity {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-/////////////////////////////////// the compressed image  is now being encoded and created
-                    /////////// byte by byte in the thumb byte array
+                    // the compressed image  is now being encoded and created byte by byte in the thumb byte array
                     ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                     compressor.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
                     byte[] thumb = byteArrayOutputStream.toByteArray();
@@ -234,7 +233,8 @@ public class UserAccount extends AppCompatActivity {
     // Technically this block is not throwing any errors but, I don't think it does what I want at the moment.
     // https://firebase.google.com/docs/storage/android/upload-files#get_a_download_url
 
-    // choose and crop the image
+    // If userImage.setOnClickListener() method is given permission by the user to
+    // access the device's image software, choose and crop the image.
     private void ChooseImage() {
         CropImage.activity()
                 .setGuidelines(CropImageView.Guidelines.ON)
@@ -249,6 +249,17 @@ public class UserAccount extends AppCompatActivity {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode==RESULT_OK) {
                 imageUri = result.getUri();
+                // this is why the image is not showing. I need to implement this method below:
+                // userImage = setImageURI(imageUri)
+                // I have a found a few different options:
+                // http://www.java2s.com/Code/Android/UI/SetimageUriforImageView.htm -- probably not
+                // https://forums.xamarin.com/discussion/4323/image-from-url-in-imageview/p1 -- maybe
+                // https://stackoverflow.com/questions/3870638/how-to-use-setimageuri-on-android -- most likely
+                // https://theartofdev.com/2016/01/15/android-image-cropper-async-support-and-custom-progress-ui/ -- maybe
+                // https://github.com/ArthurHub/Android-Image-Cropper/issues/159 -- not that useful.
+                // there is also a method setImageUriAsync() supposedly. I'm not sure at the moment.
+
+
 
             }else if (resultCode==CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();

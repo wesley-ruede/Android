@@ -54,7 +54,7 @@ public class ItemAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
-        // a view type variable that takes a LayoutInflater to be inflated  with
+        // A View that takes a LayoutInflater to be inflated  with
         // the layout resource which is my_listview_detail
         View v = mInflater.inflate(R.layout.my_listview_detail, null);
         // look inside the view created by the inflated mInflater for a
@@ -67,11 +67,7 @@ public class ItemAdapter extends BaseAdapter {
         // i is the current item in the array of items e.g. item 1 is a peach
         // and item 2 is tomatoes and so on
         String name = items[i];
-        // i is the current description in the array of descriptions e.g. a peach's
-        // and then a tomato's description
         String desc =  descriptions[i];
-        // i is the current price in the array of prices e.g. a peach's price
-        // and a tomato's price
         String cost = prices[i];
 
         // putting the indexed arrays into the TextView

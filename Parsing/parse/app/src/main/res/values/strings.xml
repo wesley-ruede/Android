@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Parse</string>
+    <string name="json_text_view_text">Json response</string>
+</resources>

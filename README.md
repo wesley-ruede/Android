@@ -7,7 +7,7 @@ In the future apks will be released for ease of access because I found that movi
 SDK tools - 29+<br/>
 Google Play Services 49+<br/>
 reccomend virtual device - Nexus 5 with API 24<br/>
-Minumum API - 16 (increased for Firebase)<br/>
+Minumum API - 19 (increased for maximum coverage)<br/>
 
 # App descriptions
 

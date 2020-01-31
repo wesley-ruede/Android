@@ -50,11 +50,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                // creating an Intent with an application context
                 Intent showDetailActivity = new Intent(getApplicationContext(), DetailActivity.class);
                 // send the activity the index of the item that is sent
                 showDetailActivity.putExtra("com.WesleyRuede.ITEM_INDEX", i);
                 // move to the image activity by clicking on the item in my_listview_detail Activity
+                showDetailActivity.putExtra("DA","log 1");
+                showDetailActivity.putExtra("IA","log 2");
+
                 startActivity(showDetailActivity);
 
                 // ListView is showing an image in another activity when pressed

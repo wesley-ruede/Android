@@ -25,13 +25,14 @@ public class DetailActivity extends AppCompatActivity {
 
         // Creating an Intent in response to the setOnItemCLickListener()'s
         // method startActivity() to draw an image on the screen.
-        Intent in = getIntent();
+        Intent intent = getIntent();
         // Here I learned a nuance of Java as negative indexing is not allowed
         // so by using the very last element of an array denotes the end of it
-        int index = in.getIntExtra("com.WesleyRuede.ITEM_INDEX", -1);
+        int index = intent.getIntExtra("com.WesleyRuede.ITEM_INDEX", -1);
+        String log1 = intent.getStringExtra("DA");
+
 
         // call getImg method and scaleImg method
-
         if (index > -1) {
             // get the image at the index being passed in
             int pic = getImg(index);
