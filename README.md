@@ -1,6 +1,8 @@
-# Java Based Android Development
+# Android 
 
-In the future apks will be released for ease of access because I found that moving a project and renaming it is not easy. You can download the project and as long as you have Android Studio installed it will recognize the framework.
+## Java Based Android Development
+
+You will need to have Android Studio installed to compile these projects. All apks are debug releases and you will need to allow installation from unknown sources to install them on your device.
 
 # Reccomeneded Settings and tools
 
@@ -9,24 +11,21 @@ Google Play Services 49+<br/>
 reccomend virtual device - Nexus 5 with API 24<br/>
 Minumum API - 19 (increased for maximum coverage)<br/>
 
-# App descriptions
+# Current Project
+1. Trivia -- internet
 
-## AddingApp 
+# Releases -- Permissions
 
-A very simple app that adds two numbers. Nothing special here.
-
-## Quicklauncher
- 
-An app which goes to a second activity and goes to a website. The google button will query the Android device to find an appliction which can handle the desired request.
-
-# Builds
-
-1. ListView -- debug (see notes)
-2. LoginLogout -- debug (see note)
+1. ListApp -- None
+2. LoginLogout -- internet
+3. Parse -- internet
+4. ActivityLifeCycle -- None
+5. MakeItRain -- None
+6. Quiz -- None
 
 ## Notes
 
-10/29/19 -- The ListView app requires that you allow unknown sources to be installed on your phone. For ease of install (post Android 6.0 has native compression/decompression) please download the ListApp_debug.zip package in the APKs/debug folder and extract the ListApp_debug.apk. No permission are required.
+10/29/19 -- For easy install download ListApp_1.0.apk [here](www.website.com).
 
 10/29/19 -- LoginLogout requires internet permissions and is unsigned. Cannot log out yet. That is coming next along with creating an account.
 
@@ -39,3 +38,8 @@ An app which goes to a second activity and goes to a website. The google button 
 11/08/19 -- Syntatx wise the code works. I have implemented the code that is needed for a sucessfull download of the image for the most part. I know some of it is still broken. I still have a bit more work to do until I can move forward.
 
 11/11/19 -- The structures are correct and I have enhanced the code for catching errors. The project builds and I get an uploading  dialogue. I had one error and worked through it. Things are looking good just need to get everything in order and I'll be able to move on.
+
+02/05/20 -- LoginLogout is broken. People can still create an account with email or login but, you cannot save to the cloud storage. The 
+process is broken and not working for the current version of Android and the projet has been abandoned. I've since released QuizApp, Trivia,
+ActivtyLifeCycle, Parse, and I'll be releasing a new project soon. There are new README's all through out and there is a restructure in 
+the works to clean up the repo. I'll be coming back around for FireStore in the future.

@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Parse</string>
-    <string name="rightButton">Right</string>
-    <string name="quote">An intent is used to declare that you want a view to move to a different activity and pass data.</string>
-</resources>
