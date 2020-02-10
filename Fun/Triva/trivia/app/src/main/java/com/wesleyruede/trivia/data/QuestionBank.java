@@ -15,7 +15,7 @@ import java.util.List;
 
 public class QuestionBank {
     ArrayList<Question> questionArrayList = new ArrayList<>();
-    private String url = "ghghghghghghg";
+    private String url = "https://raw.githubusercontent.com/curiousily/simple-quiz/master/script/statements-data.json";
 
     public List<Question> getQuestions(final AnswerListAsyncResponse callBack){
 
@@ -23,21 +23,21 @@ public class QuestionBank {
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
                 url,
-                (JSONArray) null,
+                null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
-                        // iterate through the array of arrays
+                        // iterate through the response ( till the end
                         for (int i = 0; i < response.length(); i++) {
                             try {
                                 Question question = new Question();
-                                // get the string and bool value of each array for for each array
+                                // get the string and bool value in each array
                                 question.setAnswer(response.getJSONArray(i).get(0).toString());
                                 question.setAnswerTrue(response.getJSONArray(i).getBoolean(1));
 
-                                // Add question objects to list-- .add() is a Volley method
+                                // Pack the set string and bool values of
+                                // the Question objects to List
                                 questionArrayList.add(question);
-
 
                                 // Log.d("string", "onResponse: " + question.getAnswer());
                                 // Log.d("JSON", "onResponse: " + response.getJSONArray(i).get(0));
@@ -45,8 +45,7 @@ public class QuestionBank {
                                 e.printStackTrace();
                             }
                         }
-                        // handle the possibility of a null response and
-                        // handle the process asynchronously with an Interface
+                        // handle null responses with an asynchronous Interface
                         if(null != callBack) callBack.processFinished(questionArrayList);
 
                     }

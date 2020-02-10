@@ -6,8 +6,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
-// A singleton to make sure only one instance is created
-// for the json response to keep the app light.
+// A singleton to make sure one instance is created per request to the api
 
 public class AppController extends Application {
     public static final String TAG = AppController.class.getSimpleName();
@@ -25,8 +24,6 @@ public class AppController extends Application {
         super.onCreate();
         mInstance = this;
     }
-
-
 
     public RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {
@@ -50,11 +47,5 @@ public class AppController extends Application {
         if (mRequestQueue != null) {
             mRequestQueue.cancelAll(tag);
         }
-
     }
 }
-
-
-
-
-

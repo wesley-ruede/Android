@@ -1,8 +1,9 @@
 package com.wesleyruede.trivia.model;
 
-// take the answer whether true or false
-// and be able to find out if the string
-// is set to true or false
+// Get the string and bool in the json array and determine if the response
+// is correct or incorrect. Assist with the construction of a List of these
+// Questions by iterating through the json api and add all elements into a
+// response which is prepared to be shown in activity_main.xml through calling
 
 public class Question {
     private String answer;
@@ -11,7 +12,7 @@ public class Question {
     public Question() {
 
     }
-    // a xml string (R.string) and a literal Bool (true)
+    // a Json String and Boolean " " / (true/false)
     public Question(String answer, Boolean answerTrue) {
         this.answer = answer;
         this.answerTrue = answerTrue;
@@ -21,7 +22,7 @@ public class Question {
         return answer;
     }
 
-    public Boolean getAnswerTrue() {
+    public Boolean isAnswerTrue() {
         return answerTrue;
     }
 
@@ -33,9 +34,8 @@ public class Question {
         this.answerTrue = answerTrue;
     }
 
-    // set each Question to a string instead
-    // of a memory address when the json url
-    // 2-d array is iterated through
+    // set each Question to a String  and boolean instead of a memory
+    // address when the json url (array of arrays) is stepped through
 
     @Override
     public String toString() {

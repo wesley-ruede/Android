@@ -19,9 +19,9 @@ Minumum API - 19 (increased for maximum coverage)<br/>
 1. ListApp -- None
 2. LoginLogout -- internet
 3. Parse -- internet
-4. ActivityLifeCycle -- None
 5. MakeItRain -- None
 6. Quiz -- None
+7. Triva -- internet
 
 ## Notes
 
@@ -43,3 +43,5 @@ Minumum API - 19 (increased for maximum coverage)<br/>
 process is broken and not working for the current version of Android and the projet has been abandoned. I've since released QuizApp, Trivia,
 ActivtyLifeCycle, Parse, and I'll be releasing a new project soon. There are new README's all through out and there is a restructure in 
 the works to clean up the repo. I'll be coming back around for FireStore in the future.
+
+02/10/20 -- Triva is an app which utilizes the Volley Library to handle Json api calls. There are quite a few variations completed for people to try. Triva_1.0 utilizes Toast messages to confirm if the answer is correct or incorrect similar to the Question app I created. Triva_1.1 uses a shake animation and opacity animation while changing the CardView colors, green for correct and red for wrong. The Toast messages were still in place. Triva_1.2 finaly introduces the SharedPreference class which allows for saving of data locally on the device. The high score is saved when someone quits the app. 

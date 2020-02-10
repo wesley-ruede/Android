@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Trivia</string>
-    <string name="title_text_view">Title</string>
     <string name="false_button_string">False</string>
     <string name="true_button_string">True</string>
+    <string name="next_button_description">next</string>
+    <string name="previous_button_description">previous</string>
+    <string name="correct_answer">That is correct</string>
+    <string name="wrong_answer">That is incorrect</string>
+    <string name="out_of"> / </string>
+    <string name="out_of_100">0 out of 100</string>
+    <string name="default_question_text">This is where we are going to add stuff about some more stuff and whatever</string>
+    <string name="current_score">00000</string>
+    <string name="high_score">00000</string>
 </resources>

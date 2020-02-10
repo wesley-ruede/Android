@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("message",message);
 
-                editor.commit(); // saving to disk!
+                editor.apply(); // saving to disk!
 
             }
         });
