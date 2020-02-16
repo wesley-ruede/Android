@@ -2,26 +2,33 @@
 
 ## Java Based Android Development
 
-You will need to have Android Studio installed to compile these projects. All apks are debug releases and you will need to allow installation from unknown sources to install them on your device.
+Hey I'm Wes and this is where I do my Android apps, It's kinda like you are lookng directly on my computer, whoa. Don't worry I'll help you find the right app for you. I really reccomend the Trivia app. To work on these projects and compile them you will require Android Studio. If you would like to try one of my apps there is a list which gives you information on whether or not the app requires any special permissions such as internet or storage. To install the apps you will need to allow unknown sources on your device because these apps are in development and, as such are considered to be in debug mode. The Triva is app is the closest I have gotten to making a game.
+
+## Screen shots
+![Triva 1](Gallery/trivia_portrait.png)
+![Triva 2](Gallery/trivia_land.png)
 
 # Reccomeneded Settings and tools
 
+Android Studio - 3.5.3<br/>
+Java version - openjdk 11.0.4 64-Bit<br/>
 SDK tools - 29+<br/>
 Google Play Services 49+<br/>
-reccomend virtual device - Nexus 5 with API 24<br/>
-Minumum API - 19 (increased for maximum coverage)<br/>
+Virtual devices - Nexus 5:api 24, Pixel:api 27<br/>
+Minumum API - 19 (95% coverage of all devices)<br/>
 
 # Current Project
-1. Trivia -- internet
+1. Contact Manager -- None
 
 # Releases -- Permissions
 
 1. ListApp -- None
 2. LoginLogout -- internet
 3. Parse -- internet
-5. MakeItRain -- None
-6. Quiz -- None
-7. Triva -- internet
+4. MakeItRain -- None
+5. Quiz -- None
+6. Triva -- internet
+7. Contact Manager -- None
 
 ## Notes
 
@@ -45,3 +52,5 @@ ActivtyLifeCycle, Parse, and I'll be releasing a new project soon. There are new
 the works to clean up the repo. I'll be coming back around for FireStore in the future.
 
 02/10/20 -- Triva is an app which utilizes the Volley Library to handle Json api calls. There are quite a few variations completed for people to try. Triva_1.0 utilizes Toast messages to confirm if the answer is correct or incorrect similar to the Question app I created. Triva_1.1 uses a shake animation and opacity animation while changing the CardView colors, green for correct and red for wrong. The Toast messages were still in place. Triva_1.2 finaly introduces the SharedPreference class which allows for saving of data locally on the device. The high score is saved when someone quits the app. 
+
+20/14/20 -- Contact Manager 1.0 is a single table sqlite3 app that is completely logcat based. Contact Manager 1.1 will have a ListView to display entries in the data base. Added some screen shots to improve the readme.
