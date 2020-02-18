@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private int questionIndex = 0;
 
-    // string array for the buttons to move through
+    // A string array for the buttons to move through
     private Question[] questionBank = new Question[] {
             new Question(R.string.question00,true),
             new Question(R.string.question01,false),
@@ -45,21 +45,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nextButton = findViewById(R.id.next_button);
         previousButton = findViewById(R.id.previous_button);
 
-        // Interface to override onClickListener implement the
-        // onClickListener class A class which allows multiple inheritance
-        // onViewClicked basically it makes it so all of these Views have
-        // an onClickListener registered to them
-
-        // register buttons to listen for click events
+        // All these Views are listening for button clicks
         falseButton.setOnClickListener(this);
         trueButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
         previousButton.setOnClickListener(this);
     }
-    // if the registered View, buttons are clicked do x,y,z
-    // onViewClicked Interface to listen to true and false buttons
-
-    // a quick message when the buttons are pressed
+    // If the buttons are clicked do x,y,z, and show a message on the screen
     @Override
     public void onClick(View view) {
         // allow access to all resources by id

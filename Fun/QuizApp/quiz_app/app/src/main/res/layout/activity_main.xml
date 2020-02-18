@@ -41,6 +41,7 @@
             android:text="@string/true_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/false_button"
             android:layout_width="wrap_content"
@@ -49,23 +50,23 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="398dp"
+        android:layout_height="258dp"
         android:gravity="center">
 
         <ImageButton
-            android:contentDescription="@string/previous"
             android:id="@+id/previous_button"
-            android:src="@drawable/button_left"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/previous"
+            android:src="@drawable/button_left" />
 
         <ImageButton
-            android:contentDescription="@string/next"
-            android:src="@drawable/button_right"
             android:id="@+id/next_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/next"
+            android:src="@drawable/button_right" />
     </LinearLayout>
 
 </LinearLayout>
