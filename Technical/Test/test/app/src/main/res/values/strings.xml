@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="drop_table">DROP TABLE IF EXISTS</string>
+    <string name="create_table">CREATE TABLE</string>
+    <string name="int_primary_key">INTEGER PRIMARY KEY,</string>
+    <string name="sql_text">TEXT</string>
+</resources>

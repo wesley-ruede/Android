@@ -53,4 +53,10 @@ the works to clean up the repo. I'll be coming back around for FireStore in the 
 
 02/10/20 -- Triva is an app which utilizes the Volley Library to handle Json api calls. There are quite a few variations completed for people to try. Triva_1.0 utilizes Toast messages to confirm if the answer is correct or incorrect similar to the Question app I created. Triva_1.1 uses a shake animation and opacity animation while changing the CardView colors, green for correct and red for wrong. The Toast messages were still in place. Triva_1.2 finaly introduces the SharedPreference class which allows for saving of data locally on the device. The high score is saved when someone quits the app. 
 
-20/14/20 -- Contact Manager 1.0 is a single table sqlite3 app that is completely logcat based. Contact Manager 1.1 will have a ListView to display entries in the data base. Added some screen shots to improve the readme.
+02/14/20 -- Contact Manager 1.0 is a single table sqlite3 app that is completely logcat based. Contact Manager 1.1 will have a ListView to display entries in the data base. Added some screen shots to improve the readme.
+
+02/19/20 -- The ListView variation of Contact Manager is complete. Updated
+QuickLauncher with a background and refactored the code. The RecyclerView 
+version of Contact Manager is almost complete. Drew in a background to enhance
+the visuals. All in All RecyclerView layouts are a lot more involved than
+ListViews but, very rewarding in terms of visuals and customization options.
