@@ -18,7 +18,8 @@ Virtual devices - Nexus 5:api 24, Pixel:api 27<br/>
 Minumum API - 19 (95% coverage of all devices)<br/>
 
 # Current Project
-1. Contact Manager -- None
+
+1. Baby Needs
 
 # Releases -- Permissions
 
@@ -28,7 +29,6 @@ Minumum API - 19 (95% coverage of all devices)<br/>
 4. MakeItRain -- None
 5. Quiz -- None
 6. Triva -- internet
-7. Contact Manager -- None
 
 ## Notes
 
@@ -60,3 +60,7 @@ QuickLauncher with a background and refactored the code. The RecyclerView
 version of Contact Manager is almost complete. Drew in a background to enhance
 the visuals. All in All RecyclerView layouts are a lot more involved than
 ListViews but, very rewarding in terms of visuals and customization options.
+
+02/21/20 -- removed Contact Manager from releases as it is not possible to
+populate the RecyclerView from the db once on a Physical device. A Todo app is
+coming soon.
