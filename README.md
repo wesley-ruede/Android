@@ -20,6 +20,7 @@ Minumum API - 19 (95% coverage of all devices)<br/>
 # Current Project
 
 1. Baby Needs
+2. Test
 
 # Releases -- Permissions
 
@@ -63,4 +64,6 @@ ListViews but, very rewarding in terms of visuals and customization options.
 
 02/21/20 -- removed Contact Manager from releases as it is not possible to
 populate the RecyclerView from the db once on a Physical device. A Todo app is
-coming soon.
+coming soon. Test is a playground app where I test all of my skills up to this
+point. More changes coming soon. Maybe I'll be able to get the DreamKeeper app
+working at this rate.
