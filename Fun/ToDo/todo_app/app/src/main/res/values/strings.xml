@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Todo App</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_item">Add item</string>
+    <string name="enter_item">enter item</string>
+    <string name="text_enter_item">Enter an item</string>
+    <string name="text_enter_color">Enter a color</string>
+    <string name="enter_color">Enter a color</string>
+    <string name="enter_size">Enter a size</string>
+    <string name="enter_amount">Enter an amount</string>
+    <string name="save_button_string">save</string>
+</resources>

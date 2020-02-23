@@ -14,13 +14,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -34,31 +32,22 @@ import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 import com.wesleyruede.loginlogout.MainActivity;
 import com.wesleyruede.loginlogout.R;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 import id.zelory.compressor.Compressor;
 
-// this was a tricky one to handle and
-// had to delete import io.grpc.Compressor
-
 public class UserAccount extends AppCompatActivity {
-
-    // field variables for the ui xml elements
     ImageView userImage;
     EditText userName, userPhone, userAddress;
     Button complete;
-
-    // choose image
+    // User Image field variables
     private Uri imageUri;
     private Bitmap compressor;
     private ProgressDialog progressDialog;
-
-    // Google's Firebase, Firestore, and with Cloud storage
+    // Google's Firebase and Firestore
     String user_id;
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
@@ -70,8 +59,6 @@ public class UserAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_account);
-
-        // reference to the xml views in resources
         userImage = findViewById(R.id.userImage);
         userName = findViewById(R.id.userName);
         userPhone = findViewById(R.id.userPhone);
@@ -79,8 +66,7 @@ public class UserAccount extends AppCompatActivity {
         complete = findViewById(R.id.complete);
         progressDialog = new ProgressDialog(this);
 
-        // instantiating the Firebase objects to access
-        // the methods provided by the respective classes
+        // Firebase and Firestore instances
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         user_id = firebaseAuth.getCurrentUser().getUid();
@@ -139,8 +125,8 @@ public class UserAccount extends AppCompatActivity {
                     UploadTask image_path = storageReference.child("user_image").child(user_id + ".jpg").putBytes(thumb);
                     final StorageReference ref = storageReference.child("user_image");
                     uploadTask = ref.putBytes(thumb);
-//////////////////////////////////// the issue is that this application is assuming a best case scenario
-                    //////////////// and the lack of a onFailureListener does not allow exceptions to be handled
+
+                    // Handles errors
                     image_path.addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
@@ -152,10 +138,7 @@ public class UserAccount extends AppCompatActivity {
                         public void onComplete(@NonNull Task<com.google.firebase.storage.UploadTask.TaskSnapshot> task) {
                             if(task.isSuccessful()){
 
-                                StoreData(task,
-                                        useraddress,
-                                        username,
-                                        userphone);
+                                StoreData(task,useraddress,username,userphone);
 
                             }else {
                                 String error = task.getException().getMessage();
@@ -163,15 +146,12 @@ public class UserAccount extends AppCompatActivity {
                                 progressDialog.dismiss();
 
                             }
-
-
                         }
                     });
                 }
             }
         });
     }
-
 
     // This is progress. Finally got somewhere with my efforts.
     private void StoreData(Task<com.google.firebase.storage.UploadTask.TaskSnapshot> task, String useraddress, String username, String userphone) {
@@ -180,7 +160,6 @@ public class UserAccount extends AppCompatActivity {
         final String fuserphone = userphone;
         final String fuseraddress =  useraddress;
         final StorageReference ref = storageReference.child("user_image");
-
 
         // this is a necessary block for the getDownloadUrl() method and getResult() method. It also catches errors which is nice.
         Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
@@ -229,8 +208,7 @@ public class UserAccount extends AppCompatActivity {
             }
         });
 
-    }
-    // Technically this block is not throwing any errors but, I don't think it does what I want at the moment.
+    // The block isn't throwing errors but, it doesn't do what I want at the moment.
     // https://firebase.google.com/docs/storage/android/upload-files#get_a_download_url
 
     // If userImage.setOnClickListener() method is given permission by the user to
@@ -257,9 +235,7 @@ public class UserAccount extends AppCompatActivity {
                 // https://stackoverflow.com/questions/3870638/how-to-use-setimageuri-on-android -- most likely
                 // https://theartofdev.com/2016/01/15/android-image-cropper-async-support-and-custom-progress-ui/ -- maybe
                 // https://github.com/ArthurHub/Android-Image-Cropper/issues/159 -- not that useful.
-                // there is also a method setImageUriAsync() supposedly. I'm not sure at the moment.
-
-
+                // there is also a method setImageUriAsync() I'm not sure at the moment.
 
             }else if (resultCode==CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Exception error = result.getError();

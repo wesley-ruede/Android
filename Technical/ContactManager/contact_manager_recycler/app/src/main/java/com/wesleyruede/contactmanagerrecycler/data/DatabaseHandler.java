@@ -28,7 +28,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String CREATE_CONTACT_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "("
                 + Util.KEY_ID + " INTEGER PRIMARY KEY,"
                 + Util.KEY_NAME + " TEXT,"
-                + Util.KEY_PHONE_NUMBER + " TEXT" + ")";
+                + Util.KEY_PHONE_NUMBER + " TEXT);";
         db.execSQL(CREATE_CONTACT_TABLE); // Creating the table
     }
 

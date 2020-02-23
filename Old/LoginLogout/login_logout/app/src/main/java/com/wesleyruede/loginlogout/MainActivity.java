@@ -51,16 +51,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        signout = findViewById(R.id.signoutButton);
+        user_account = findViewById(R.id.userAccount);
         mAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
-
         current_user_id = mAuth.getUid();
 
         // when the signoutButton is pressed call signout on mAuth and send
         // the user back to the login activity
-        signout = findViewById(R.id.signoutButton);
-        user_account = findViewById(R.id.userAccount);
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,13 +82,14 @@ public class MainActivity extends AppCompatActivity {
 // project level build.gradle successfully updated
 // app level build.gradle successfully updated
 // Firebase sdk installed
-// created a new package in the Main Java directory
-// login and logout layout will be in the authentication
+// created authentication package
+// login and logout classes will be in the authentication
 // added user credentials to Firebase email Authentication database
 // user successfully signed in with device
 // login complete -- 10/29/19
-// added create a user feature in SignupActivity with in activity_signup
+// create ui for SignupActivity named activity_signup
 // created a user and logout finished 10/30/19
 // fixed all syntax errors in UserAccounts, added an image to the device, and succeeded in uploading
 // the collection as strings. I will need to figure out how to get the image to show after it is
 // cropped. -- 11/15/19
+// The upload process is broken and doesn't upload at all. Abandonded.

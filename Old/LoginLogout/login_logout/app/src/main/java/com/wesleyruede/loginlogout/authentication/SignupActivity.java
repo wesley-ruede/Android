@@ -7,10 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -19,24 +17,19 @@ import com.wesleyruede.loginlogout.MainActivity;
 import com.wesleyruede.loginlogout.R;
 
 public class SignupActivity extends AppCompatActivity {
-
     private EditText emailField, passwordField, passwordConfirm;
     private Button complete, signin;
-
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
         emailField = findViewById(R.id.emailField);
         passwordField = findViewById(R.id.passwordField);
         passwordConfirm = findViewById(R.id.passwordConfirm);
-
         complete = findViewById(R.id.complete);
         signin = findViewById(R.id.signinButton);
-
         mAuth = FirebaseAuth.getInstance();
 
         // if the signinButton is pressed return to the LoginActivity \
@@ -47,7 +40,6 @@ public class SignupActivity extends AppCompatActivity {
                 finish();
             }
         });
-
 
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,5 +77,7 @@ public class SignupActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //Todo: implement OnViewCLick
     }
 }
