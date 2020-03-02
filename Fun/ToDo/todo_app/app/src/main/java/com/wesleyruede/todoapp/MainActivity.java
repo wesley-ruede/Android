@@ -1,6 +1,8 @@
 package com.wesleyruede.todoapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.wesleyruede.todoapp.data.DatabaseHandler;
 import com.wesleyruede.todoapp.model.Item;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private AlertDialog.Builder builder;
@@ -34,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
         databaseHandler = new DatabaseHandler(this);
 
         // check if item was saved
-//        List<Item> item_list = databaseHandler.getAllItems();
-//        for (Item item_i:item_list) {
-//            Log.d("item_list", "onCreate: " + item_i.getDateCreated());
-//        }
+        List<Item> item_list = databaseHandler.getAllItems();
+        for (Item item_i:item_list) {
+            Log.d("item_list", "onCreate: " + item_i.getDateCreated());
+        }
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -97,9 +100,16 @@ public class MainActivity extends AppCompatActivity {
         // Snackbar needs a view
         Snackbar.make(view,"Item saved",Snackbar.LENGTH_SHORT).show();
         Log.d("item_id", "saveItem: " + item.getId());
-        Log.d("item_name", "saveItem: " +item.getItemName());
-        Log.d("item_color", "saveItem: " + item.getItemColor());
-        Log.d("item_date", "saveItem: " + item.getDateCreated());
+
+        /* a delayed action to give the app time to store the data and dismiss the popup */
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dialog.dismiss();
+                //Todo: move to next screen - detail screen
+                startActivity(new Intent(MainActivity.this, ListlessActivity.class));
+            }
+        },1200); // 1 sec
     }
 
     @Override

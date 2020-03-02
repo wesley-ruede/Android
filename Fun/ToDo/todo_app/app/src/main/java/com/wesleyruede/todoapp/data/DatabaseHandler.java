@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private Context context;
+    private final Context context;
     public DatabaseHandler(@Nullable Context context) {
         super(context, Constants.DB_NAME, null, Constants.DB_VERSION);
         this.context = context;
@@ -24,10 +24,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String CREATE_ITEM_TABLE = " CREATE TABLE " + Constants.TABLE_NAME + "("
-                + Constants.KEY_ID + " INTEGER PRIMARY KEY," + Constants.KEY_ITEM_NAME + " INTEGER,"
-                + Constants.KEY_ITEM_COLOR + " TEXT, " + Constants.KEY_ITEM_AMOUNT + " INTEGER, "
-                + Constants.KEY_ITEM_SIZE + " INTEGER, " + Constants.KEY_DATE_ADDED + " LONG)";
+        String CREATE_ITEM_TABLE = "CREATE TABLE " + Constants.TABLE_NAME + "("
+                + Constants.KEY_ID + " INTEGER PRIMARY KEY,"
+                + Constants.KEY_ITEM_NAME + " INTEGER,"
+                + Constants.KEY_ITEM_COLOR + " TEXT, "
+                + Constants.KEY_ITEM_AMOUNT + " INTEGER,"
+                + Constants.KEY_ITEM_SIZE + " INTEGER,"
+                + Constants.KEY_DATE_ADDED + " LONG);";
         db.execSQL(CREATE_ITEM_TABLE);
     }
 
@@ -59,11 +62,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         Cursor cursor = db.query(Constants.TABLE_NAME,
                 new String[]{Constants.KEY_ID,
-                Constants.KEY_ITEM_NAME,
-                Constants.KEY_ITEM_AMOUNT,
-                Constants.KEY_ITEM_COLOR,
-                Constants.KEY_ITEM_SIZE,
-                Constants.KEY_DATE_ADDED},
+                        Constants.KEY_ITEM_NAME,
+                        Constants.KEY_ITEM_AMOUNT,
+                        Constants.KEY_ITEM_COLOR,
+                        Constants.KEY_ITEM_SIZE,
+                        Constants.KEY_DATE_ADDED},
                 Constants.KEY_ID + "=?",
                 new String[]{String.valueOf(id)},null,null,null,null);
 

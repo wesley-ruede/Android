@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         changeText.setOnClickListener(this);
         buttonTwo.setOnClickListener(this);
 
-        Journal journal = db.getEntry(0);
+        // Journal journal = db.getEntry(0);
         Journal journal_entry = new Journal();
         journal_entry.setJournalEntry("another great message");
-        db.addEntry(journal_entry);
+        // db.addEntry(journal_entry);
         Log.d("journal_entries", "onCreate: " +journal_entry.getId());
 
 
@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_two:
                 String input_var = editText.getText().toString().trim();
-                // journal.setJournalEntry(input_var);
-                //db.addEntry(journal);
+                journal.setJournalEntry(input_var);
+                db.addEntry(journal);
                 Toast.makeText(MainActivity.this," "+journal.getJournalEntry(), Toast.LENGTH_SHORT).show();
                 break;
         }

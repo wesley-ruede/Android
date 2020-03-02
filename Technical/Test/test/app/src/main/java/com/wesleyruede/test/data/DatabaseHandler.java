@@ -5,25 +5,29 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import com.wesleyruede.test.R;
 import com.wesleyruede.test.model.Journal;
 import com.wesleyruede.test.util.Util;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private Context context;
+
+    private static final String TAG = "DBH";
 
     public DatabaseHandler(Context context) {
-        super(context, Util.DATABASE_NAME, null, Util.DATABASE_VERSION);
+        super(context,Util.DATABASE_NAME,null,Util.DATABASE_VERSION);
     }
     
     /* Create a table in the database*/
     @Override
     public void onCreate(SQLiteDatabase db) {
         
-        String CREATE_JOURNAL_TABLE = "CREATE TABLE " + Util.TABLE_NAME  +"("
+        String CREATE_JOURNAL_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "("
                 + Util.KEY_ID + " INTEGER PRIMARY KEY,"
-                + Util.KEY_ENTRY + " TEXT" + ")";
+                + Util.KEY_ENTRY + " TEXT);";
         db.execSQL(CREATE_JOURNAL_TABLE);
+        Log.d(TAG, "onCreate: " +Util.TABLE_NAME);
+        Log.d(TAG, "onCreate: " +Util.KEY_ID);
     }
 
     @Override
@@ -46,6 +50,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(Util.KEY_ENTRY,journal.getJournalEntry());
         db.insert(Util.TABLE_NAME,null,values);
+        Log.d(TAG, "addEntry: " + journal.getId());
         db.close();
     }
 
