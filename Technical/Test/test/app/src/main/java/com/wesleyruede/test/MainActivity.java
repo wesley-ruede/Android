@@ -1,5 +1,6 @@
 package com.wesleyruede.test;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonTwo;
     private ArrayList<Journal> journalArrayList;
 
+
+    /* Media Player */
+    private MediaPlayer mediaPlayer;
+    private Button playButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +35,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editText = findViewById(R.id.enter_text);
         changeText = findViewById(R.id.button_one);
         buttonTwo = findViewById(R.id.button_two);
+        playButton = findViewById(R.id.play_button);
 
         changeText.setOnClickListener(this);
         buttonTwo.setOnClickListener(this);
+        playButton.setOnClickListener(this);
 
         // Journal journal = db.getEntry(0);
         Journal journal_entry = new Journal();
@@ -39,7 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // db.addEntry(journal_entry);
         Log.d("journal_entries", "onCreate: " +journal_entry.getId());
 
-
+        mediaPlayer = new MediaPlayer();
+        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.edm_music);
     }
 
     @Override
@@ -57,6 +66,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 db.addEntry(journal);
                 Toast.makeText(MainActivity.this," "+journal.getJournalEntry(), Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.play_button:
+                if (mediaPlayer.isPlaying()) {
+                    //Todo: stop and give users the option to start again
+                    pauseMusic();
+                }else {
+                    playMusic();
+                }
+                break;
+        }
+    }
+
+    public void pauseMusic() {
+        if (mediaPlayer != null) {
+            mediaPlayer.pause();
+            playButton.setText(R.string.play_text);
+        }
+    }
+
+    public void playMusic() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+            playButton.setText(R.string.pause_text);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer != null) {
+            mediaPlayer.pause();
+            mediaPlayer.release();
         }
     }
 }

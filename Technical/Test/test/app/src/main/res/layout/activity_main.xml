@@ -83,12 +83,16 @@
             android:layout_marginLeft="16dp"
             android:text="Change the text"
             app:layout_constraintStart_toStartOf="parent" />
-
         <Button
             android:id="@+id/button_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Store Entry" />
+            android:text="Store Entry"/>
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/play"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

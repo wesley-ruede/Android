@@ -15,7 +15,6 @@ import java.util.Date;
 import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-
     private final Context context;
 
     public DatabaseHandler(@Nullable Context context) {
@@ -32,20 +31,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 + Constants.KEY_QTY_NUMBER + " INTEGER,"
                 + Constants.KEY_ITEM_SIZE + " INTEGER,"
                 + Constants.KEY_DATE_NAME + " LONG);";
-
         db.execSQL(CREATE_BABY_TABLE);
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
         db.execSQL("DROP TABLE IF EXISTS " + Constants.TABLE_NAME);
-
         onCreate(db);
     }
 
-    // CRUD operations
+    /* CRUD */
+
+    /* Create */
     public void addItem(Item item) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -56,25 +53,21 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(Constants.KEY_ITEM_SIZE, item.getItemSize());
         values.put(Constants.KEY_DATE_NAME, java.lang.System.currentTimeMillis());//timestamp of the system
 
-        //Inset the row
+        // Inset the row
         db.insert(Constants.TABLE_NAME, null, values);
 
         Log.d("DBHandler", "added Item: ");
     }
 
-    //Get an Item
+    /* Read */
     public Item getItem(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(Constants.TABLE_NAME,
-                new String[]{Constants.KEY_ID,
-                        Constants.KEY_BABY_ITEM,
-                        Constants.KEY_COLOR,
-                        Constants.KEY_QTY_NUMBER,
-                        Constants.KEY_ITEM_SIZE,
-                        Constants.KEY_DATE_NAME},
-                Constants.KEY_ID + "=?",
-                new String[]{String.valueOf(id)}, null, null, null, null);
+                new String[]{Constants.KEY_ID,Constants.KEY_BABY_ITEM,Constants.KEY_COLOR,
+                        Constants.KEY_QTY_NUMBER,Constants.KEY_ITEM_SIZE,Constants.KEY_DATE_NAME},
+                Constants.KEY_ID + "=?",new String[]{String.valueOf(id)}, null,
+                null, null, null);
 
         if (cursor != null)
             cursor.moveToFirst();
@@ -87,20 +80,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             item.setItemQuantity(cursor.getInt(cursor.getColumnIndex(Constants.KEY_QTY_NUMBER)));
             item.setItemSize(cursor.getInt(cursor.getColumnIndex(Constants.KEY_ITEM_SIZE)));
 
-            //convert Timestamp to something readable
+            // Convert Timestamp to a human-readable format
             DateFormat dateFormat = DateFormat.getDateInstance();
             String formattedDate = dateFormat.format(new Date(cursor.getLong(cursor.getColumnIndex(Constants.KEY_DATE_NAME)))
                     .getTime()); // Feb 23, 2020
 
             item.setDateItemAdded(formattedDate);
-
-
         }
-
         return item;
     }
 
-    //Get all Items
+    /* Read */
     public List<Item> getAllItems() {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -136,10 +126,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
         return itemList;
-
     }
 
-    //Todo: Add updateItem
+    /* Update */
     public int updateItem(Item item) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -150,34 +139,28 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(Constants.KEY_ITEM_SIZE, item.getItemSize());
         values.put(Constants.KEY_DATE_NAME, java.lang.System.currentTimeMillis());//timestamp of the system
 
-        //update row
+        // Update row
         return db.update(Constants.TABLE_NAME, values,
                 Constants.KEY_ID + "=?",
                 new String[]{String.valueOf(item.getId())});
-
     }
 
-    //Todo: Add Delete Item
+    /* Delete */
     public void deleteItem(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(Constants.TABLE_NAME,
                 Constants.KEY_ID + "=?",
                 new String[]{String.valueOf(id)});
 
-        //close
         db.close();
-
     }
 
-    //Todo: getItemCount
+    /* Count */
     public int getItemsCount() {
         String countQuery = "SELECT * FROM " + Constants.TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.rawQuery(countQuery, null);
-
         return cursor.getCount();
-
     }
-
 }

@@ -11,6 +11,11 @@ public class Item {
     public Item() {
     }
 
+    public Item(String itemName, String itemColor) {
+        this.itemName = itemName;
+        this.itemColor = itemColor;
+    }
+
     public Item(String itemName, String itemColor, int itemQuantity, int itemSize, String dateItemAdded) {
         this.itemName = itemName;
         this.itemColor = itemColor;

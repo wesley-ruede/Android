@@ -7,8 +7,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,6 +19,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.wesleyruede.testtwo.data.DatabaseHandler;
 import com.wesleyruede.testtwo.model.Item;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,7 +31,13 @@ public class MainActivity extends AppCompatActivity {
     private EditText itemColor;
     private EditText itemSize;
     private EditText itemName;
-    private DatabaseHandler databaseHandler;
+    private DatabaseHandler db;
+
+    /* ListView/RecyclerView */
+    private ListView listView;
+    private Array itemArray;
+    private ArrayList<String> itemArrayList;
+    private ArrayAdapter<String> arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        databaseHandler = new DatabaseHandler(this);
+        db = new DatabaseHandler(this);
 
-        // check if item was saved
-        List<Item> item_list = databaseHandler.getAllItems();
+        /* Check item Saved */
+        List<Item> item_list = db.getAllItems();
         for (Item item_i:item_list) {
             Log.d("item_list", "onCreate: " + item_i.getDateItemAdded());
         }
@@ -49,6 +60,39 @@ public class MainActivity extends AppCompatActivity {
                 createPopupDialog();
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
+            }
+        });
+
+        /* ListView */
+
+//        db.addItem(new Item("Cup","Pink"));
+//        db.addItem(new Item("Cup","Red"));
+//        db.addItem(new Item("Cup","Blue"));
+//        db.addItem(new Item("Cup","Yellow"));
+//        db.addItem(new Item("Cup","Brown"));
+//        db.addItem(new Item("Cup","Black"));
+
+        listView = findViewById(R.id.list_view);
+        itemArrayList = new ArrayList<>();
+
+        List<Item> item_list_two = db.getAllItems();
+        for (Item item:item_list_two) {
+            itemArrayList.add(item.getItemName());
+        }
+        /* Create ArrayAdapter*/
+        arrayAdapter = new ArrayAdapter<>(
+                this,android.R.layout.simple_list_item_1,itemArrayList
+        );
+
+        /* Add to ListView */
+        listView.setAdapter(arrayAdapter);
+
+        /* EventListener for clicks */
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Log.d("ListPosition", "onItemClick: " + position);
+                Log.d("ListNames", "onItemClick: " + itemArrayList.get(position));
             }
         });
     }
@@ -84,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void saveItem(View view) {
         //Todo: save each item to db
-
         Item item = new Item();
         String newItem = itemName.getText().toString().trim();
         String newColor = itemColor.getText().toString().trim();
@@ -96,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         item.setItemQuantity(amount);
         item.setItemSize(size);
 
-        databaseHandler.addItem(item);
+        db.addItem(item);
         // Snackbar needs a view
         Snackbar.make(view,"Item saved",Snackbar.LENGTH_SHORT).show();
         Log.d("item_id", "saveItem: " + item.getId());

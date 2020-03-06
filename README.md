@@ -19,8 +19,9 @@ Minumum API - 19 (95% coverage of all devices)<br/>
 
 # Current Project
 
-1. Baby Needs
-2. Test
+1. CloudStore
+2. Test/Test FAB
+
 
 # Releases -- Permissions
 
@@ -67,3 +68,8 @@ populate the RecyclerView from the db once on a Physical device. A Todo app is
 coming soon. Test is a playground app where I test all of my skills up to this
 point. More changes coming soon. Maybe I'll be able to get the DreamKeeper app
 working at this rate.
+
+03/06/29 -- CloudStore app is a technical coverage of Firestore and Firebase
+libraries. A more high quality and complete app is coming soon. BabyNeeds is
+complete but, not released yet. Test is playground that I can try stuff out
+and will never be released. 

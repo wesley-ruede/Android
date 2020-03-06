@@ -11,7 +11,6 @@ import com.wesleyruede.test.model.Journal;
 import com.wesleyruede.test.util.Util;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-
     private static final String TAG = "DBH";
 
     public DatabaseHandler(Context context) {

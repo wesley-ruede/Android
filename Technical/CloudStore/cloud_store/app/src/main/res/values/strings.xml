@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CloudStore</string>
+    <string name="enter_title">enter title</string>
+    <string name="save_button_text">save</string>
+    <string name="enter_thoughts">enter thoughts</string>
+    <string name="save">Save</string>
+    <string name="show_data_text">Show Data</string>
+    <string name="update_all">Update All</string>
+    <string name="delete_all">Delete All</string>
+</resources>

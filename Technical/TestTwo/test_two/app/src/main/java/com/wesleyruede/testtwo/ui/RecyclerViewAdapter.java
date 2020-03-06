@@ -6,18 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.wesleyruede.testtwo.R;
 import com.wesleyruede.testtwo.model.Item;
-
 import java.text.MessageFormat;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-
     private Context context;
     private List<Item> itemList;
 
@@ -61,25 +57,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public TextView dateAdded;
         public Button editButton;
         public Button deleteButton;
-
         public int id;
 
         public ViewHolder(@NonNull View itemView, Context ctx) {
             super(itemView);
             context = ctx;
-
             itemName = itemView.findViewById(R.id.item_name);
             itemColor = itemView.findViewById(R.id.item_color);
             quantity = itemView.findViewById(R.id.item_quantity);
             size = itemView.findViewById(R.id.item_size);
             dateAdded = itemView.findViewById(R.id.item_date);
-
             editButton = itemView.findViewById(R.id.editButton);
             deleteButton = itemView.findViewById(R.id.deleteButton);
 
             editButton.setOnClickListener(this);
             deleteButton.setOnClickListener(this);
-
         }
 
         @Override

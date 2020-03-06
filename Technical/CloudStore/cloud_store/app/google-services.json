@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "29786373079",
+    "firebase_url": "https://cloudstore-c6aa2.firebaseio.com",
+    "project_id": "cloudstore-c6aa2",
+    "storage_bucket": "cloudstore-c6aa2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29786373079:android:013e130f562a7953282992",
+        "android_client_info": {
+          "package_name": "com.wesleyruede.cloudstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29786373079-s4l1pj883id4i3rg8bdq2ngs726olfnb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wesleyruede.cloudstore",
+            "certificate_hash": "4667443e1e646cc6af5d11ca85c964cd0a08ce07"
+          }
+        },
+        {
+          "client_id": "29786373079-pi9ru2f7jbk87qhumf7ne2dsv99888ao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEgVFHCH5OYU2iRFxcprOVAz2TrsGzh-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29786373079-pi9ru2f7jbk87qhumf7ne2dsv99888ao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
