@@ -15,6 +15,7 @@ import android.widget.ListView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.wesleyruede.testtwo.data.DatabaseHandler;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private Array itemArray;
     private ArrayList<String> itemArrayList;
     private ArrayAdapter<String> arrayAdapter;
+
+    private CardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

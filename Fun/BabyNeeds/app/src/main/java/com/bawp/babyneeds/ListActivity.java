@@ -56,7 +56,6 @@ public class ListActivity extends AppCompatActivity {
         for (Item item : itemList) {
 
             Log.d(TAG, "onCreate: " + item.getItemColor());
-
         }
 
         recyclerViewAdapter = new RecyclerViewAdapter(this, itemList);

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Self</string>
+    <string name="title">Self Reflection Journal</string>
+    <string name="grateful_string">What are you grateful for?</string>
+    <string name="get_started">Get started</string>
+</resources>

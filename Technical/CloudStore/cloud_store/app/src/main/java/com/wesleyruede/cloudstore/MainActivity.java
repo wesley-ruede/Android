@@ -154,12 +154,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     for (QueryDocumentSnapshot snapshots : queryDocumentSnapshots) {
 
                         Journal journal = snapshots.toObject(Journal.class);
-                        data += "Title: " + journal.getTitle() +" \n"
-                                + "Thought " + journal.getThought() + "\n\n";
+                        data += "Title: " + journal.getTitle() + "\n"
+                                + "Thought: " + journal.getThought() + "\n\n";
                     }
                 }
                 recTitle.setText(data);
-
             }
         });
 
@@ -237,8 +236,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         for (QueryDocumentSnapshot snapshots : queryDocumentSnapshots) {
 
                             Journal journal = snapshots.toObject(Journal.class);
-                            data += "Title: " + journal.getTitle() +" \n"
-                                    + "Thought " + journal.getThought() + "\n\n";
+                            data += "Title: " + journal.getTitle() + "\n"
+                                    + "Thought: " + journal.getThought() + "\n\n";
 
 //                            Log.d(TAG, "onSuccess: " + snapshots.getString(KEY_TITLE));
                             // recTitle.setText(journal.getTitle());
@@ -285,12 +284,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         data.put(KEY_TITLE,title);
         data.put(KEY_THOUGHT,thought);
 
-        journalRef.update(data).addOnSuccessListener(new OnSuccessListener<Void>() {
+        journalRef.update(data)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(MainActivity.this,"Updated",Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
+            }})
+                .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.d(TAG, "onFailure: " + e.toString());

@@ -2,7 +2,7 @@
 
 ## Java Based Android Development
 
-Hey I'm Wes and this is where I do my Android apps, It's kinda like you are lookng directly on my computer, whoa. Don't worry I'll help you find the right app for you. I really reccomend the Trivia app. To work on these projects and compile them you will require Android Studio. If you would like to try one of my apps there is a list which gives you information on whether or not the app requires any special permissions such as internet or storage. To install the apps you will need to allow unknown sources on your device because these apps are in development and, as such are considered to be in debug mode. The Triva is app is the closest I have gotten to making a game.
+Hey I'm Wes and this is where I create my Android apps. It's almost like you are lookng directly on my computer, whoa. Don't worry I'll help you find the right app for you. I really reccomend the Trivia app. To work on these projects and compile them you will require Android Studio. If you would like to try one of my apps there is a list which gives you information on whether or not the app requires any special permissions such as internet or storage. To install the apps you will need to allow unknown sources on your device because these apps are in development and, are in debug mode. The Triva is app is a fun little game and I have a few more features coming in the future.
 
 ## Screen shots
 ![Triva 1](Gallery/trivia_portrait.png)
@@ -10,18 +10,19 @@ Hey I'm Wes and this is where I do my Android apps, It's kinda like you are look
 
 # Reccomeneded Settings and tools
 
-Android Studio - 3.5.3<br/>
+Android Studio - 3.6.1<br/>
+Gradle Plugin Version - 3.6.0<br/>
 Java version - openjdk 11.0.4 64-Bit<br/>
 SDK tools - 29+<br/>
 Google Play Services 49+<br/>
 Virtual devices - Nexus 5:api 24, Pixel:api 27<br/>
-Minumum API - 19 (95% coverage of all devices)<br/>
+Minumum SDK - 19 (95% coverage of all devices)<br/>
+Target SDK - 29 (Android 10.0 >1% of all devices)<br/>
 
-# Current Project
+# Current Project(s)
 
 1. CloudStore
-2. Test/Test FAB
-
+2. Self Reflection Journal
 
 # Releases -- Permissions
 
@@ -57,19 +58,11 @@ the works to clean up the repo. I'll be coming back around for FireStore in the 
 
 02/14/20 -- Contact Manager 1.0 is a single table sqlite3 app that is completely logcat based. Contact Manager 1.1 will have a ListView to display entries in the data base. Added some screen shots to improve the readme.
 
-02/19/20 -- The ListView variation of Contact Manager is complete. Updated
-QuickLauncher with a background and refactored the code. The RecyclerView 
-version of Contact Manager is almost complete. Drew in a background to enhance
-the visuals. All in All RecyclerView layouts are a lot more involved than
-ListViews but, very rewarding in terms of visuals and customization options.
+02/19/20 -- The ListView variation of Contact Manager is complete. Updated QuickLauncher with a background and refactored the code. The RecyclerView version of Contact Manager is almost complete. Drew in a background to enhance the visuals. All in All RecyclerView layouts are a lot more involved thanListViews but, very rewarding in terms of visuals and customization options.
 
-02/21/20 -- removed Contact Manager from releases as it is not possible to
-populate the RecyclerView from the db once on a Physical device. A Todo app is
-coming soon. Test is a playground app where I test all of my skills up to this
-point. More changes coming soon. Maybe I'll be able to get the DreamKeeper app
-working at this rate.
+02/21/20 -- removed Contact Manager from releases as it is not possible to populate the RecyclerView from the db once on a Physical device. A Todo app is coming soon. More changes coming soon. Maybe I'll be able to get the DreamKeeper app working at this rate.
 
-03/06/29 -- CloudStore app is a technical coverage of Firestore and Firebase
-libraries. A more high quality and complete app is coming soon. BabyNeeds is
-complete but, not released yet. Test is playground that I can try stuff out
-and will never be released. 
+03/06/20 -- CloudStore app is a technical coverage of Firestore and Firebase libraries. A more high quality and complete app is coming soon. BabyNeeds is complete but, not released yet. Test is a playground that I can try stuff out and will never be released.
+
+03/09/20 -- Besides a one null repsonse on a string I am able to retrieve data from the cloudStore app and show it in a nested scroll view. Once I get it done I'll release it along with my ToDo app. Self Reflection Journal is a cloud based journal that uses Firebase, auth for secure user creds, and storage for pictures. I now get how NoSql works in comparison to SQL. It is a very different type of database however, just as effective from what I can tell. Here is hoping I'll be able to solve my previous image issue I was having in my other app Login Logout. It would likely take a lot of work that is most pointless as I'll be going through user auth and image uploads just without the cropping mechanic once again in a much better app.
+

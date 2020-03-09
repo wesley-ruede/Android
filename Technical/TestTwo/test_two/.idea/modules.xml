@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Test FAB.iml" filepath="$PROJECT_DIR$/Test FAB.iml" group="Test FAB" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Test FAB/app" />
+      <module fileurl="file://$PROJECT_DIR$/cardview-1.0.0/cardview-1.0.0.iml" filepath="$PROJECT_DIR$/cardview-1.0.0/cardview-1.0.0.iml" group="Test FAB/cardview-1.0.0" />
     </modules>
   </component>
 </project>
