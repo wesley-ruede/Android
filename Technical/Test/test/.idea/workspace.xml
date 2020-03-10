@@ -11,17 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e728238-5a71-4970-b69d-3f04c7807fc9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Fun/BabyNeeds/app/src/main/java/com/bawp/babyneeds/ListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Fun/BabyNeeds/app/src/main/java/com/bawp/babyneeds/ListActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Fun/ToDo/todo_app/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Fun/ToDo/todo_app/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CloudStore/cloud_store/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CloudStore/cloud_store/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/src/main/java/com/wesleyruede/cloudstore/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/src/main/java/com/wesleyruede/cloudstore/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Fun/Self/self/app/src/main/java/com/wesleyruede/self/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Fun/Self/self/app/src/main/java/com/wesleyruede/self/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/wesleyruede/test/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyruede/test/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>

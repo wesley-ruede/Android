@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_alignParentTop="true"
+        android:id="@+id/img_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"/>
+    <CheckBox
+            android:id="@+id/check_box_one"
+        android:layout_below="@+id/img_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"/>
+    <TextView
+            android:id="@+id/text_view_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item one"
+        android:layout_below="@id/img_one"
+            android:textSize="20sp"
+        android:layout_toEndOf="@+id/check_box_one"/>
+
+
+    <ImageView
+        android:id="@+id/img_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_below="@+id/check_box_one"/>
+        <CheckBox
+            android:id="@+id/check_box_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_two"/>
+        <TextView
+            android:id="@+id/text_view_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item two"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@+id/img_two"
+            android:layout_toEndOf="@+id/check_box_two"/>
+
+
+    <ImageView
+        android:id="@+id/img_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_below="@+id/check_box_two"/>
+        <CheckBox
+            android:id="@+id/check_box_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_three"/>
+        <TextView
+            android:id="@+id/text_view_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item three"
+            android:layout_below="@id/img_three"
+            android:textSize="20sp"
+            android:layout_toEndOf="@+id/check_box_three"
+            android:layout_marginEnd="8dp"/>
+
+    <ImageView
+        android:id="@+id/img_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"/>
+        <CheckBox
+            android:id="@+id/check_box_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/text_view_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item four"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp"/>
+
+    <ImageView
+        android:id="@+id/img_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"/>
+        <CheckBox
+            android:id="@+id/check_box_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/text_view_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item five"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp"/>
+
+    <ImageView
+        android:id="@+id/img_six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"/>
+        <CheckBox
+            android:id="@+id/check_box_six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/text_view_six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item six"
+            android:textSize="20sp"
+            android:layout_marginEnd="8dp"/>
+
+</RelativeLayout>

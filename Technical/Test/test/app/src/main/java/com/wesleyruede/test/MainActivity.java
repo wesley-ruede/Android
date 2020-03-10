@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,13 +14,15 @@ import com.wesleyruede.test.data.DatabaseHandler;
 import com.wesleyruede.test.model.Journal;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView textView;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    private static final String TAG = "log_levels";
+    private TextView textView, checkBoxText;
+    private CheckBox checkBox;
     private EditText editText;
-    private Button changeText;
+    private Button changeText, checkBoxButton;
     private Button buttonTwo;
+    private StringBuilder str;
     private ArrayList<Journal> journalArrayList;
-
 
     /* Media Player */
     private MediaPlayer mediaPlayer;
@@ -36,10 +39,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         changeText = findViewById(R.id.button_one);
         buttonTwo = findViewById(R.id.button_two);
         playButton = findViewById(R.id.play_button);
+        checkBoxButton = findViewById(R.id.check_box_button);
 
+        /* OnClick buttons */
         changeText.setOnClickListener(this);
         buttonTwo.setOnClickListener(this);
         playButton.setOnClickListener(this);
+        checkBoxButton.setOnClickListener(this);
+
+        /* I need to research this */
+        // checkBox.setOnCheckedChangeListener(this);
+
+        /* Media Player */
+        mediaPlayer = new MediaPlayer();
+        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.edm_music);
+
+        /* Check Box */
+        checkBoxText = findViewById(R.id.check_box_text);
+        checkBox = findViewById(R.id.check_box);
 
         // Journal journal = db.getEntry(0);
         Journal journal_entry = new Journal();
@@ -47,8 +64,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // db.addEntry(journal_entry);
         Log.d("journal_entries", "onCreate: " +journal_entry.getId());
 
-        mediaPlayer = new MediaPlayer();
-        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.edm_music);
+        /* Logcat levels */
+        Log.d(TAG, "onCreate: Debug");
+        Log.i(TAG, "onCreate: Info ");
+        Log.w(TAG, "onCreate: Warning ");
+        Log.e(TAG, "onCreate: Error ");
     }
 
     @Override
@@ -74,6 +94,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     playMusic();
                 }
                 break;
+            case R.id.check_box_button:
+                isChecked();
+                break;
+
         }
     }
 
@@ -97,6 +121,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (mediaPlayer != null) {
             mediaPlayer.pause();
             mediaPlayer.release();
+        }
+    }
+
+    public void isChecked() {
+        if (checkBox.isChecked()) {
+            checkBoxText.setText("You clicked the check box");
+        }else if (!checkBox.isChecked()) {
+            checkBoxText.setText("please click the check box");
         }
     }
 }
