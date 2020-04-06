@@ -12,17 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d7a2c45-ab2e-439c-96f1-9801172320f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Fun/BabyNeeds/app/src/main/java/com/bawp/babyneeds/ListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Fun/BabyNeeds/app/src/main/java/com/bawp/babyneeds/ListActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Fun/ToDo/todo_app/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Fun/ToDo/todo_app/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CloudStore/cloud_store/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CloudStore/cloud_store/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/src/main/java/com/wesleyruede/cloudstore/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/src/main/java/com/wesleyruede/cloudstore/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Test/test/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../Test/test/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Test/test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Test/test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/androidTest/java/com/wesleyruede/testthree/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/java/com/wesleyruede/testthree/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/java/com/wesleyruede/testthree/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/test/java/com/wesleyruede/testthree/ExampleUnitTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +173,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
