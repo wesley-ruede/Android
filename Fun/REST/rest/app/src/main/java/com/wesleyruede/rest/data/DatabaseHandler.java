@@ -6,16 +6,18 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import com.jakewharton.threetenabp.AndroidThreeTen;
 import com.wesleyruede.rest.R;
 import com.wesleyruede.rest.dbutil.DBUtil;
 import com.wesleyruede.rest.model.Groups;
+import org.threeten.bp.LocalTime;
+import org.threeten.bp.format.DateTimeFormatter;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    //private LocalTime local_time;
-    //private DateTimeFormatter dateTimeFormatter;
 
     public DatabaseHandler(Context context) {
         super(context, DBUtil.DATABASE_NAME,null, DBUtil.DATABASE_VERSION);
+        AndroidThreeTen.init(context);
     }
 
     @Override
@@ -71,7 +73,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL(FRIDAY_GROUP_TABLE);
         db.execSQL(SATURDAY_GROUP_TABLE);
         db.execSQL(SUNDAY_GROUP_TABLE);
-
 
     }
 
@@ -214,16 +215,21 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             groups.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(DBUtil.KEY_ID))));
             groups.setGroupName(cursor.getString(cursor.getColumnIndex(DBUtil.KEY_GROUP_NAME)));
             groups.setGroupDay(cursor.getString(cursor.getColumnIndex(DBUtil.KEY_GROUP_DAY)));
-            groups.setGroupStartTime(cursor.getString(cursor.getColumnIndex(DBUtil.KEY_START_TIME)));
+
+            LocalTime group_start_time = LocalTime.MIN.plusMinutes(150);
+            String formatted_start_time = group_start_time.format(DateTimeFormatter.ofPattern(
+                    String.valueOf(cursor.getLong(cursor.getColumnIndex(DBUtil.KEY_START_TIME)))));
+            groups.setGroupStartTime(formatted_start_time);
+
+            LocalTime group_end_time = LocalTime.MIN.plusMinutes(0);
+            String formatted_end_time = group_end_time.format(DateTimeFormatter.ofPattern(
+                    String.valueOf(cursor.getLong(cursor.getColumnIndex(DBUtil.KEY_END_TIME)))));
+            groups.setGroupEndTime(formatted_end_time);
+
+            /*
             groups.setGroupEndTime(cursor.getString(cursor.getColumnIndex(DBUtil.KEY_END_TIME)));
-
-            /*String local = local_time.MIN.plus(Duration.ofMinutes(260L)).toString();
-
-            // Human readable timestamp
-            DateFormat dateFormat = DateFormat.getDateInstance();
-            String formattedDate = dateFormat.format(new Date(cursor.getLong(
-                    cursor.getColumnIndex(DBUtil.KEY_START_TIME)).getTime()); // Feb 23, 2020
-            groups.setDateCreated(formattedDate);*/
+            groups.setGroupStartTime(cursor.getString(cursor.getColumnIndex(DBUtil.KEY_START_TIME)));
+             */
         }
     }
 
