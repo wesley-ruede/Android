@@ -12,6 +12,8 @@ import com.wesleyruede.rest.dbutil.DBUtil;
 import com.wesleyruede.rest.model.Groups;
 import org.threeten.bp.LocalTime;
 import org.threeten.bp.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
 
@@ -85,8 +87,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     /* CRUD */
 
-
     /* Create */
+
     public void mondayAddGroup(Groups groups) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -472,32 +474,188 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
     }
 
-    public void getAllMondayGroups() {
+    /* READ */
 
+    public List<Groups> getAllMondayGroups() {
+        List<Groups> groupsList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // Select all contacts from the database table
+        String selectAll = "SELECT * FROM " + DBUtil.MONDAY_TABLE;
+        Cursor cursor = db.rawQuery(selectAll,null);
+
+        // loop through the data
+        if (cursor.moveToFirst()) {
+            do {
+                Groups groups = new Groups();
+                groups.setId(Integer.parseInt(cursor.getString(0)));
+                groups.setGroupDay(cursor.getString(1));
+                groups.setGroupName(cursor.getString(2));
+                groups.setGroupStartTime(cursor.getString(3));
+                groups.setGroupEndTime(cursor.getString(4));
+
+                // add contact objects to our list
+                groupsList.add(groups);
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        return groupsList;
     }
 
-    public void getAllTuesdayGroups() {
+    public List<Groups> getAllTuesdayGroups() {
+        List<Groups> groupsList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
 
+        // Select all contacts from the database table
+        String selectAll = "SELECT * FROM " + DBUtil.TUESDAY_TABLE;
+        Cursor cursor = db.rawQuery(selectAll,null);
+
+        // loop through the data
+        if (cursor.moveToFirst()) {
+            do {
+                Groups groups = new Groups();
+                groups.setId(Integer.parseInt(cursor.getString(0)));
+                groups.setGroupDay(cursor.getString(1));
+                groups.setGroupName(cursor.getString(2));
+                groups.setGroupStartTime(cursor.getString(3));
+                groups.setGroupEndTime(cursor.getString(4));
+
+                // add contact objects to our list
+                groupsList.add(groups);
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        return groupsList;
     }
 
-    public void getAllWednesdayGroups() {
+    public List<Groups> getAllWednesdayGroups() {
+        List<Groups> groupsList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
 
+        // Select all contacts from the database table
+        String selectAll = "SELECT * FROM " + DBUtil.WEDNESDAY_TABLE;
+        Cursor cursor = db.rawQuery(selectAll,null);
+
+        // loop through the data
+        if (cursor.moveToFirst()) {
+            do {
+                Groups groups = new Groups();
+                groups.setId(Integer.parseInt(cursor.getString(0)));
+                groups.setGroupDay(cursor.getString(1));
+                groups.setGroupName(cursor.getString(2));
+                groups.setGroupStartTime(cursor.getString(3));
+                groups.setGroupEndTime(cursor.getString(4));
+
+                // add contact objects to our list
+                groupsList.add(groups);
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        return groupsList;
     }
 
-    public void getAllThursdayGroups() {
+    public List<Groups> getAllThursdayGroups() {
+        List<Groups> groupsList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
 
+        // Select all contacts from the database table
+        String selectAll = "SELECT * FROM " + DBUtil.THURSDAY_TABLE;
+        Cursor cursor = db.rawQuery(selectAll,null);
+
+        // loop through the data
+        if (cursor.moveToFirst()) {
+            do {
+                Groups groups = new Groups();
+                groups.setId(Integer.parseInt(cursor.getString(0)));
+                groups.setGroupDay(cursor.getString(1));
+                groups.setGroupName(cursor.getString(2));
+                groups.setGroupStartTime(cursor.getString(3));
+                groups.setGroupEndTime(cursor.getString(4));
+
+                // add contact objects to our list
+                groupsList.add(groups);
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        return groupsList;
     }
 
-    public void getAllFridayGroups() {
+    public List<Groups> getAllFridayGroups() {
+        List<Groups> groupsList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
 
+        // Select all contacts from the database table
+        String selectAll = "SELECT * FROM " + DBUtil.FRIDAY_TABLE;
+        Cursor cursor = db.rawQuery(selectAll,null);
+
+        // loop through the data
+        if (cursor.moveToFirst()) {
+            do {
+                Groups groups = new Groups();
+                groups.setId(Integer.parseInt(cursor.getString(0)));
+                groups.setGroupDay(cursor.getString(1));
+                groups.setGroupName(cursor.getString(2));
+                groups.setGroupStartTime(cursor.getString(3));
+                groups.setGroupEndTime(cursor.getString(4));
+
+                // add contact objects to our list
+                groupsList.add(groups);
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        return groupsList;
     }
 
-    public void getAllSaturdayGroups() {
+    public List<Groups> getAllSaturdayGroups() {
+        List<Groups> groupsList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
 
+        // Select all contacts from the database table
+        String selectAll = "SELECT * FROM " + DBUtil.SATURDAY_TABLE;
+        Cursor cursor = db.rawQuery(selectAll,null);
+
+        // loop through the data
+        if (cursor.moveToFirst()) {
+            do {
+                Groups groups = new Groups();
+                groups.setId(Integer.parseInt(cursor.getString(0)));
+                groups.setGroupDay(cursor.getString(1));
+                groups.setGroupName(cursor.getString(2));
+                groups.setGroupStartTime(cursor.getString(3));
+                groups.setGroupEndTime(cursor.getString(4));
+
+                // add contact objects to our list
+                groupsList.add(groups);
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        return groupsList;
     }
 
-    public void getAllSundayGroup() {
+    public List<Groups> getAllSundayGroup() {
+        List<Groups> groupsList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
 
+        // Select all contacts from the database table
+        String selectAll = "SELECT * FROM " + DBUtil.SUNDAY_TABLE;
+        Cursor cursor = db.rawQuery(selectAll,null);
+
+        // loop through the data
+        if (cursor.moveToFirst()) {
+            do {
+                Groups groups = new Groups();
+                groups.setId(Integer.parseInt(cursor.getString(0)));
+                groups.setGroupDay(cursor.getString(1));
+                groups.setGroupName(cursor.getString(2));
+                groups.setGroupStartTime(cursor.getString(3));
+                groups.setGroupEndTime(cursor.getString(4));
+
+                // add contact objects to our list
+                groupsList.add(groups);
+            }while (cursor.moveToNext());
+        }
+        cursor.close();
+        return groupsList;
     }
 
     /* Update */
@@ -607,8 +765,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 new String[]{String.valueOf(groups.getId())});
     }
 
-
     /* Delete */
+
     public void deleteMondayGroup(Groups wed_groups) {
         SQLiteDatabase db = this.getWritableDatabase();
 
