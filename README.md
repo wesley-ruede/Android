@@ -23,6 +23,7 @@ Target SDK - 29 (Android 10.0 >1% of all devices)<br/>
 
 1. CloudStore
 2. Self Reflection Journal
+3. REST
 
 # Releases -- Permissions
 
@@ -66,3 +67,4 @@ the works to clean up the repo. I'll be coming back around for FireStore in the 
 
 03/09/20 -- Besides a one null repsonse on a string I am able to retrieve data from the cloudStore app and show it in a nested scroll view. Once I get it done I'll release it along with my ToDo app. Self Reflection Journal is a cloud based journal that uses Firebase, auth for secure user creds, and storage for pictures. I now get how NoSql works in comparison to SQL. It is a very different type of database however, just as effective from what I can tell. Here is hoping I'll be able to solve my previous image issue I was having in my other app Login Logout. It would likely take a lot of work that is most pointless as I'll be going through user auth and image uploads just without the cropping mechanic once again in a much better app.
 
+04/13/20 -- The REST app's database is complete!

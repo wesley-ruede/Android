@@ -12,13 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d7a2c45-ab2e-439c-96f1-9801172320f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contact_manager/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../contact_manager/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contact_manager/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../contact_manager/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/androidTest/java/com/wesleyruede/testthree/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/java/com/wesleyruede/testthree/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/java/com/wesleyruede/testthree/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestThree/test_three/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestThree/test_three/app/src/test/java/com/wesleyruede/testthree/ExampleUnitTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

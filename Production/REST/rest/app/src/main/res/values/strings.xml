@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">REST</string>
+    <string name="db_drop">DROP TABLE IF EXISTS</string>
+    <string name="item_one">Item One</string>
+    <string name="item_two">Item two</string>
+    <string name="item_three">Item three</string>
+    <string name="item_four">Item four</string>
+    <string name="item_five">Item five</string>
+    <string name="item_six">Item six</string>
+    <string name="button_text">Button</string>
+    <string name="rest_acronym">R.E.S.T</string>
+    <string name="rest_meaning">Recovery Employment Support Training</string>
+</resources>
