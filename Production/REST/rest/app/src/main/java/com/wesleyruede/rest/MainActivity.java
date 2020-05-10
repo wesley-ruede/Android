@@ -27,14 +27,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Groups mondayGroups = new Groups();
-        mondayGroups.setGroupStartTime("2:04");
-        mondayGroups.setGroupEndTime("4:45");
-        mondayGroups.setGroupDay("Monday");
-        mondayGroups.setGroupName("A Group");
-        db.mondayAddGroup(mondayGroups);
+        Groups monday_group_one = new Groups();
+        monday_group_one.setGroupStartTime("9:00 AM");
+        monday_group_one.setGroupEndTime("10:00 AM");
+        monday_group_one.setGroupDay("Monday");
+        monday_group_one.setGroupName("Daily reflection // Just for today");
+        //db.mondayAddGroup(new Groups(1,"Monday","Step//Sponsorship","12:00 PM","1:00 PM"));
+        //db.mondayAddGroup(new Groups(2,"Monday","All Recovery-YPR","8:15 PM","9:15 PM"));
+        db.mondayAddGroup(monday_group_one);
 
-
-        Log.d("MON", "onCreate: " + mondayGroups.getGroupStartTime() + " , " +mondayGroups.getGroupEndTime()+ " , " +mondayGroups.getGroupName());
+        Log.d("MON", "onCreate: " + monday_group_one.getGroupStartTime() + " , " +monday_group_one.getGroupEndTime()+ " , " +monday_group_one.getGroupName()+ " , " +monday_group_one.getGroupDay());
     }
 }

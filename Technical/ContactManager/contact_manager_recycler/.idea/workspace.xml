@@ -12,9 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d7a2c45-ab2e-439c-96f1-9801172320f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contact_manager/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../contact_manager/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contact_manager/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../contact_manager/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Production/REST/rest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Production/REST/rest/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Production/REST/rest/app/src/main/java/com/wesleyruede/rest/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Production/REST/rest/app/src/main/java/com/wesleyruede/rest/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -75,6 +74,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Fun/BabyNeeds" />
     <property name="settings.editor.selected.configurable" value="experimental" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
