@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.daysoftheweek.SundayActivity"></activity>
+        <activity android:name=".ui.daysoftheweek.SaturdayActivity" />
+        <activity android:name=".ui.daysoftheweek.FridayActivity" />
+        <activity android:name=".ui.daysoftheweek.ThursdayActivity" />
+        <activity android:name=".ui.daysoftheweek.WednesdayActivity" />
+        <activity android:name=".ui.daysoftheweek.TuesdayActivity" />
+        <activity android:name=".ui.daysoftheweek.MondayActivity" />
         <activity android:name=".ui.HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
