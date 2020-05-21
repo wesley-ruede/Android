@@ -10,4 +10,7 @@
     <string name="button_text">Button</string>
     <string name="rest_acronym">R.E.S.T</string>
     <string name="rest_meaning">Recovery Employment Support Training</string>
+    <string name="start_time">start time</string>
+    <string name="end_time">end time</string>
+    <string name="group_name">group name</string>
 </resources>

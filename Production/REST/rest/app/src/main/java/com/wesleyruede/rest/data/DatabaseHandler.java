@@ -27,44 +27,44 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         String MONDAY_GROUP_TABLE = "CREATE TABLE " + DBUtil.MONDAY_TABLE + "("
                 + DBUtil.KEY_ID + " INTEGER PRIMARY KEY,"
-                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_GROUP_DAY + " TEXT,"
+                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_START_TIME + " TEXT,"
                 + DBUtil.KEY_END_TIME + " TEXT);";
         String TUESDAY_GROUP_TABLE = "CREATE TABLE " + DBUtil.TUESDAY_TABLE + "("
                 + DBUtil.KEY_ID + " INTEGER PRIMARY KEY,"
-                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_GROUP_DAY + " TEXT,"
+                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_START_TIME + " TEXT,"
                 + DBUtil.KEY_END_TIME + " TEXT);";
         String WEDNESDAY_GROUP_TABLE = "CREATE TABLE " + DBUtil.WEDNESDAY_TABLE + "("
                 + DBUtil.KEY_ID + " INTEGER PRIMARY KEY,"
-                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_GROUP_DAY + " TEXT,"
+                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_START_TIME + " TEXT,"
                 + DBUtil.KEY_END_TIME + " TEXT);";
         String THURSDAY_GROUP_TABLE = "CREATE TABLE " + DBUtil.THURSDAY_TABLE + "("
                 + DBUtil.KEY_ID + " INTEGER PRIMARY KEY,"
-                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_GROUP_DAY + " TEXT,"
+                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_START_TIME + " TEXT,"
                 + DBUtil.KEY_END_TIME + " TEXT);";
         String FRIDAY_GROUP_TABLE = "CREATE TABLE " + DBUtil.FRIDAY_TABLE + "("
                 + DBUtil.KEY_ID + " INTEGER PRIMARY KEY,"
-                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_GROUP_DAY + " TEXT,"
+                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_START_TIME + " TEXT,"
                 + DBUtil.KEY_END_TIME + " TEXT);";
         String SATURDAY_GROUP_TABLE = "CREATE TABLE " + DBUtil.SATURDAY_TABLE + "("
                 + DBUtil.KEY_ID + " INTEGER PRIMARY KEY,"
-                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_GROUP_DAY + " TEXT,"
+                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_START_TIME + " TEXT,"
                 + DBUtil.KEY_END_TIME + " TEXT);";
         String SUNDAY_GROUP_TABLE = "CREATE TABLE " + DBUtil.SUNDAY_TABLE + "("
                 + DBUtil.KEY_ID + " INTEGER PRIMARY KEY,"
-                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_GROUP_DAY + " TEXT,"
+                + DBUtil.KEY_GROUP_NAME + " TEXT,"
                 + DBUtil.KEY_START_TIME + " TEXT,"
                 + DBUtil.KEY_END_TIME + " TEXT);";
 
@@ -572,7 +572,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 groups.setGroupStartTime(cursor.getString(3));
                 groups.setGroupEndTime(cursor.getString(4));
 
-                // add contact objects to our list
+                // add contact objects to the list
                 groupsList.add(groups);
             }while (cursor.moveToNext());
         }

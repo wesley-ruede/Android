@@ -1,5 +1,6 @@
 package com.wesleyruede.rest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.jakewharton.threetenabp.AndroidThreeTen;
 import com.wesleyruede.rest.data.DatabaseHandler;
 import com.wesleyruede.rest.model.Groups;
+import com.wesleyruede.rest.ui.daysoftheweek.FridayActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
+                Intent intent = new Intent(MainActivity.this, FridayActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -36,6 +38,6 @@ public class MainActivity extends AppCompatActivity {
         //db.mondayAddGroup(new Groups(2,"Monday","All Recovery-YPR","8:15 PM","9:15 PM"));
         db.mondayAddGroup(monday_group_one);
 
-        Log.d("MON", "onCreate: " + monday_group_one.getGroupStartTime() + " , " +monday_group_one.getGroupEndTime()+ " , " +monday_group_one.getGroupName()+ " , " +monday_group_one.getGroupDay());
+        Log.d("MainActivity", "onCreate: " + monday_group_one.getGroupStartTime() + " , " +monday_group_one.getGroupEndTime()+ " , " +monday_group_one.getGroupName()+ " , " +monday_group_one.getGroupDay());
     }
 }
