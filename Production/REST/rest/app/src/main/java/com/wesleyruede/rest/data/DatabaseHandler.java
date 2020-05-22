@@ -632,7 +632,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return groupsList;
     }
 
-    public List<Groups> getAllSundayGroup() {
+    public List<Groups> getAllSundayGroups() {
         List<Groups> groupsList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
 

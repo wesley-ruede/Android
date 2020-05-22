@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         AndroidThreeTen.init(this);
         setContentView(R.layout.activity_main);
+        Groups groups = new Groups();
         DatabaseHandler db = new DatabaseHandler(MainActivity.this);
 
         Button button =  findViewById(R.id.complete_button_two);
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         //db.mondayAddGroup(new Groups(1,"Monday","Step//Sponsorship","12:00 PM","1:00 PM"));
         //db.mondayAddGroup(new Groups(2,"Monday","All Recovery-YPR","8:15 PM","9:15 PM"));
         db.mondayAddGroup(monday_group_one);
-
         Log.d("MainActivity", "onCreate: " + monday_group_one.getGroupStartTime() + " , " +monday_group_one.getGroupEndTime()+ " , " +monday_group_one.getGroupName()+ " , " +monday_group_one.getGroupDay());
     }
 }

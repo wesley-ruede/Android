@@ -20,6 +20,11 @@ public class FridayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_friday);
         DatabaseHandler db = new DatabaseHandler(FridayActivity.this);
         groupsArrayList = new ArrayList<>();
+
+        db.fridayAddGroup(new Groups(0,"Friday","Daily reflection//Just for today", "9:00 AM", "10:00 AM"));
+        db.fridayAddGroup(new Groups(1,"Friday","Step//Sponsorship", "12:00 PM", "1:00 PM"));
+        db.fridayAddGroup(new Groups(2,"Friday","Re entry", "2:00 PM", "3:00 PM"));
+
         TextView fridayGroupNameOne = findViewById(R.id.friday_group_name_one);
         TextView fridayGroupStartTimeOne = findViewById(R.id.friday_group_start_time_one);
         TextView fridayGroupEndTimeOne = findViewById(R.id.friday_group_end_time_one);
@@ -42,39 +47,12 @@ public class FridayActivity extends AppCompatActivity {
         fridayGroupStartTimeThree.setText(groupsList.get(11).getGroupStartTime());
         fridayGroupEndTimeThree.setText(groupsList.get(11).getGroupEndTime());
 
-        //db.fridayAddGroup(new Groups(0,"Friday","Daily reflection//Just for today", "9:00 AM", "10:00 AM"));
-        //db.fridayAddGroup(new Groups(1,"Friday","Step//Sponsorship", "12:00 PM", "1:00 PM"));
-        //db.fridayAddGroup(new Groups(2,"Friday","Re entry", "2:00 PM", "3:00 PM"));
-
-        /* List all Groups and set to TextViews */
-
-        for(Groups groups: groupsList) {
-            Log.d("friday_activity", "onCreate: " +groups.getGroupName()+" , "+groups.getGroupStartTime()+" , "+groups.getGroupEndTime());
-            //Log.d(TAG, "onCreate: " +groupsList.get(1).toString());
-            //groupsList.get(1).toString());
-//            fridayGroupNameOne.setText(groups.getGroupName());
-//            fridayGroupEndTimeOne.setText(groups.getGroupStartTime());
-//            fridayGroupStartTimeOne.setText(groups.getGroupEndTime());
-//            fridayGroupNameTwo.setText(groups.getGroupName());
-//            fridayGroupStartTimeTwo.setText(groups.getGroupStartTime());
-//            fridayGroupEndTimeTwo.setText(groups.getGroupEndTime());
-//            fridayGroupNameThree.setText(groups.getGroupName());
-//            fridayGroupStartTimeThree.setText(groups.getGroupStartTime());
-//            fridayGroupEndTimeThree.setText(groups.getGroupEndTime());
+        /* List and log all groups for debugging */
+//        for(Groups groups: groupsList) {
+//            Log.d("friday_activity", "onCreate: " +groups.getGroupName()+" , "+groups.getGroupStartTime()+" , "
+//            +groups.getGroupEndTime());
 //            groupsArrayList.add(groups);
-        }
-        Log.d("friday_contact_count", "onCreate: " +db.getAllFridayGroups());
-        Log.d("end_time", "group_end_time " +groupsList.get(0).getGroupEndTime());
-
-
-//        fridayGroupNameOne.setText(groupsList.get(0).getGroupName());
-//        fridayGroupStartTimeOne.setText(groupsList.get(0).getGroupStartTime());
-//        fridayGroupEndTimeOne.setText(groupsList.get(0).getGroupEndTime());
-//        fridayGroupNameTwo.setText(groupsList.get(1).getGroupName());
-//        fridayGroupStartTimeTwo.setText(groupsList.get(1).getGroupStartTime());
-//        fridayGroupEndTimeTwo.setText(groupsList.get(1).getGroupEndTime());
-//        fridayGroupNameThree.setText(groupsList.get(2).getGroupName());
-//        fridayGroupStartTimeThree.setText(groupsList.get(2).getGroupStartTime());
-//        fridayGroupEndTimeThree.setText(groupsList.get(2).getGroupEndTime());
+//        }
+        Log.d("friday_group_list", "onCreate: " +db.getAllFridayGroups());
     }
 }
