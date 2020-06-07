@@ -1,15 +1,11 @@
 package com.wesleyruede.rest;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import com.jakewharton.threetenabp.AndroidThreeTen;
 import com.wesleyruede.rest.data.DatabaseHandler;
 import com.wesleyruede.rest.model.Groups;
-import com.wesleyruede.rest.ui.daysoftheweek.FridayActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,15 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Groups groups = new Groups();
         DatabaseHandler db = new DatabaseHandler(MainActivity.this);
-
-        Button button =  findViewById(R.id.complete_button_two);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, FridayActivity.class);
-                startActivity(intent);
-            }
-        });
 
         Groups monday_group_one = new Groups();
         monday_group_one.setGroupStartTime("9:00 AM");

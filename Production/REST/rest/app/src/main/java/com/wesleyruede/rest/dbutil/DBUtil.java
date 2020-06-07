@@ -16,5 +16,4 @@ public class DBUtil {
     public static final String KEY_GROUP_DAY = "group_day";
     public static final String KEY_START_TIME = "start_time";
     public static final String KEY_END_TIME =  "end_time";
-
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Contact Manager Recycler.iml" filepath="$PROJECT_DIR$/Contact Manager Recycler.iml" group="Contact Manager Recycler" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Contact_Manager_Recycler.iml" filepath="$PROJECT_DIR$/.idea/modules/Contact_Manager_Recycler.iml" group="Contact_Manager_Recycler" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Contact Manager Recycler/app" />
     </modules>
   </component>

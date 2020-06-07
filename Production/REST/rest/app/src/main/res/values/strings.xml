@@ -13,4 +13,7 @@
     <string name="start_time">start time</string>
     <string name="end_time">end time</string>
     <string name="group_name">group name</string>
+    <string name="dash">-</string>
+    <string name="friday_schedule">Friday Schedule</string>
+    <string name="monday_schedule">Monday Schedule</string>
 </resources>
