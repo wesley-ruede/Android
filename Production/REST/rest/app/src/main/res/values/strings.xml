@@ -16,4 +16,13 @@
     <string name="dash">-</string>
     <string name="friday_schedule">Friday Schedule</string>
     <string name="monday_schedule">Monday Schedule</string>
+    <string name="know_more">Please choose a day</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="schedule_text">Schedule</string>
 </resources>

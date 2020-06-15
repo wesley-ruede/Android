@@ -4,19 +4,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/rest_logo_update_1"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ui.daysoftheweek.SundayActivity"></activity>
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".ui.daysoftheweek.SundayActivity"/>
         <activity android:name=".ui.daysoftheweek.SaturdayActivity" />
         <activity android:name=".ui.daysoftheweek.FridayActivity" />
         <activity android:name=".ui.daysoftheweek.ThursdayActivity" />
         <activity android:name=".ui.daysoftheweek.WednesdayActivity" />
         <activity android:name=".ui.daysoftheweek.TuesdayActivity" />
         <activity android:name=".ui.daysoftheweek.MondayActivity" />
-        <activity android:name=".ui.HomeActivity" />
+        <activity android:name=".ui.ScheduleActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

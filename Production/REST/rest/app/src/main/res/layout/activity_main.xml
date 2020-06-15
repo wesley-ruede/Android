@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,61 +10,31 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/rest_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/rest_meaning"
         android:src="@drawable/rest_logo_update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.496" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!--
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+    <Button
+        android:id="@+id/schedule_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:paddingStart="8dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="8dp"
-        app:cardCornerRadius="8dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_state"
+        android:padding="8dp"
+        android:text="@string/schedule_text"
+        android:textColor="@drawable/button_text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/holo_blue_dark">
-
-            <TextView
-                android:id="@+id/rest_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#6F9BD1"
-                android:gravity="center"
-                android:text="@string/rest_acronym"
-                android:textColor="@android:color/black"
-                android:textSize="48sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/rest_text_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rest_meaning"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2"/>
-    -->
+        app:layout_constraintTop_toBottomOf="@+id/rest_img"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
