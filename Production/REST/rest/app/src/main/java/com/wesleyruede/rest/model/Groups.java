@@ -15,6 +15,13 @@ public class Groups {
         this.groupEndTime = groupEndTime;
     }
 
+    public Groups(String groupDay, String groupName, String groupStartTime, String groupEndTime) {
+        this.groupDay = groupDay;
+        this.groupName = groupName;
+        this.groupStartTime = groupStartTime;
+        this.groupEndTime = groupEndTime;
+    }
+
     public Groups() {
     }
 

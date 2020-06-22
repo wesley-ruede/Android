@@ -19,9 +19,9 @@ public class TuesdayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tuesday);
         DatabaseHandler db = new DatabaseHandler(TuesdayActivity.this);
-        db.tuesdayAddGroup(new Groups(1,"tuesday","Step//Sponsorship","12:00 PM","1:00 PM"));
-        db.tuesdayAddGroup(new Groups(2,"tuesday","Step//Sponsorship","12:00 PM","1:00 PM"));
-        db.tuesdayAddGroup(new Groups(3,"tuesday","Step//Sponsorship","12:00 PM","1:00 PM"));
+        db.tuesdayAddGroup(new Groups(1,"tuesday","Daily reflection|Just for today","9:00 AM","10:00 AM"));
+        db.tuesdayAddGroup(new Groups(2,"tuesday","12 Step|Sponsorship","12:00 PM","1:00 PM"));
+        db.tuesdayAddGroup(new Groups(3,"tuesday","Women's through the 12 steps","1:00 PM","2:30 PM"));
 
         TextView tuesdayGroupNameOne = findViewById(R.id.tuesday_group_name_one);
         TextView tuesdayGroupStartTimeOne = findViewById(R.id.tuesday_group_start_time_one);
@@ -35,15 +35,15 @@ public class TuesdayActivity extends AppCompatActivity {
 
         /* Explicitly indexing the database objects */
         List<Groups> groupsList = db.getAllTuesdayGroups();
-        tuesdayGroupNameOne.setText(groupsList.get(9).getGroupDay());
-        tuesdayGroupStartTimeOne.setText(groupsList.get(9).getGroupStartTime());
-        tuesdayGroupEndTimeOne.setText(groupsList.get(9).getGroupEndTime());
-        tuesdayGroupNameTwo.setText(groupsList.get(10).getGroupDay());
-        tuesdayGroupStartTimeTwo.setText(groupsList.get(10).getGroupStartTime());
-        tuesdayGroupEndTimeTwo.setText(groupsList.get(10).getGroupEndTime());
-        tuesdayGroupNameThree.setText(groupsList.get(11).getGroupDay());
-        tuesdayGroupStartTimeThree.setText(groupsList.get(11).getGroupStartTime());
-        tuesdayGroupEndTimeThree.setText(groupsList.get(11).getGroupEndTime());
+        tuesdayGroupNameOne.setText(groupsList.get(3).getGroupDay());
+        tuesdayGroupStartTimeOne.setText(groupsList.get(3).getGroupStartTime());
+        tuesdayGroupEndTimeOne.setText(groupsList.get(3).getGroupEndTime());
+        tuesdayGroupNameTwo.setText(groupsList.get(4).getGroupDay());
+        tuesdayGroupStartTimeTwo.setText(groupsList.get(4).getGroupStartTime());
+        tuesdayGroupEndTimeTwo.setText(groupsList.get(4).getGroupEndTime());
+        tuesdayGroupNameThree.setText(groupsList.get(5).getGroupDay());
+        tuesdayGroupStartTimeThree.setText(groupsList.get(5).getGroupStartTime());
+        tuesdayGroupEndTimeThree.setText(groupsList.get(5).getGroupEndTime());
 
         //groupsArrayList = new ArrayList<>(); --debug
         /* List and log all groups for debugging */

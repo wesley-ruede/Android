@@ -11,30 +11,19 @@
   </component>
   <component name="AutomaticModuleUnloader">
     <loaded-modules>
-      <module name="Test FAB" />
       <module name="app" />
+      <module name="Test_FAB" />
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8848eb01-f5db-42b4-8724-e4b51fe685a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Fun/BabyNeeds/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Fun/BabyNeeds/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Fun/BabyNeeds/app/src/main/java/com/bawp/babyneeds/ListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Fun/BabyNeeds/app/src/main/java/com/bawp/babyneeds/ListActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Fun/ToDo/todo_app/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Fun/ToDo/todo_app/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CloudStore/cloud_store/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CloudStore/cloud_store/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/src/main/java/com/wesleyruede/cloudstore/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CloudStore/cloud_store/app/src/main/java/com/wesleyruede/cloudstore/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ContactManager/contact_manager_recycler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Test/test/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../Test/test/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Test/test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Test/test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Production/REST/rest/app/src/main/java/com/wesleyruede/rest/ui/ScheduleActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Production/REST/rest/app/src/main/java/com/wesleyruede/rest/ui/ScheduleActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestOne/test_one/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestOne/test_one/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestOne/test_one/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestOne/test_one/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/wesleyruede/testtwo/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/wesleyruede/testtwo/MainActivity.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,30 +122,24 @@
   </component>
   <component name="ProjectId" id="1YfUudbsHQbG7KQZomjQfbaDfiJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/cardview-1.0.0.aar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="PsdUISettings">
     <option name="LAST_EDITED_BUILD_TYPE" value="debug" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -246,6 +229,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="339" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1592311479149">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="339" y="225" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1592311479149" />
   </component>
   <component name="masterDetails">
     <states>

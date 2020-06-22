@@ -25,4 +25,9 @@
     <string name="saturday">Saturday</string>
     <string name="sunday">Sunday</string>
     <string name="schedule_text">Schedule</string>
+    <string name="saturday_schedule">"Saturday Schedule "</string>
+    <string name="sunday_schedule">Sunday Schedule</string>
+    <string name="thursday_schedule">Thursday Schedule</string>
+    <string name="tuesday_schedule">Tuesday Schedule</string>
+    <string name="wednesday_schedule">Wednesday Schedule</string>
 </resources>
