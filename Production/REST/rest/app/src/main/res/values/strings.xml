@@ -30,4 +30,6 @@
     <string name="thursday_schedule">Thursday Schedule</string>
     <string name="tuesday_schedule">Tuesday Schedule</string>
     <string name="wednesday_schedule">Wednesday Schedule</string>
+    <string name="home">Home</string>
+    <string name="schedule">Schedule</string>
 </resources>

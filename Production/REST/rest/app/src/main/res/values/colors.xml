@@ -3,5 +3,5 @@
     <color name="colorPrimary">#0E6DDB</color>
     <color name="colorPrimaryDark">#CCC8C8</color>
     <color name="colorAccent">#FFFFFF</color>
-    <color name="transparent">#668E8B</color>
+    <color name="appBlue">#1972DA</color>
 </resources>

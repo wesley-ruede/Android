@@ -7,19 +7,6 @@
     android:background="@drawable/grade"
     tools:context="com.wesleyruede.rest.ui.ScheduleActivity">
 
-    <Button
-        android:id="@+id/thursday_button"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/button_state"
-        android:text="@string/thursday"
-        android:textColor="@drawable/button_text_color"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/monday_button" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -33,6 +20,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/thursday_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_state"
+        android:text="@string/thursday"
+        android:textColor="@drawable/button_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monday_button" />
 
     <Button
         android:id="@+id/monday_button"

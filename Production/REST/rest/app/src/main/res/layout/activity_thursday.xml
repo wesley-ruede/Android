@@ -7,27 +7,17 @@
     android:background="@drawable/grade"
     tools:context="com.wesleyruede.rest.ui.daysoftheweek.ThursdayActivity">
 
-    <ImageView
-        android:id="@+id/rest_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/rest_meaning"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/rest_1_transparent" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="302dp"
-        android:layout_height="260dp"
+        android:layout_width="300dp"
+        android:layout_height="330dp"
         android:layout_marginTop="16dp"
         android:foregroundGravity="center"
         android:orientation="vertical"
         app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +37,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/dash"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@+id/thursday_group_end_time_one"
                 app:layout_constraintStart_toEndOf="@+id/thursday_group_start_time_one"
                 app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_one" />
@@ -60,6 +51,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/dash"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@+id/thursday_group_end_time_two"
                 app:layout_constraintStart_toEndOf="@+id/thursday_group_start_time_three"
                 app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_three" />
@@ -69,9 +61,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/group_name"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,6 +77,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/start_time"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_one" />
 
@@ -91,12 +85,13 @@
                 android:id="@+id/thursday_group_end_time_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:layout_marginEnd="120dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="108dp"
                 android:text="@string/end_time"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_one" />
 
             <TextView
                 android:id="@+id/thursday_group_name_two"
@@ -106,6 +101,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/group_name"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/thursday_group_start_time_one" />
 
@@ -117,6 +113,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/start_time"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_two" />
 
@@ -124,12 +121,13 @@
                 android:id="@+id/thursday_group_end_time_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:layout_marginEnd="120dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="108dp"
                 android:text="@string/end_time"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/thursday_group_end_time_one" />
+                app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_two" />
 
             <TextView
                 android:id="@+id/thursday_group_name_three"
@@ -139,6 +137,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/group_name"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/thursday_group_start_time_two" />
 
@@ -150,6 +149,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/start_time"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_three" />
 
@@ -157,12 +157,13 @@
                 android:id="@+id/thursday_group_end_time_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="124dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="108dp"
                 android:text="@string/end_time"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/thursday_group_end_time_three" />
+                app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_three" />
 
             <TextView
                 android:id="@+id/dash_two"
@@ -173,6 +174,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/dash"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@+id/thursday_group_end_time_three"
                 app:layout_constraintStart_toEndOf="@+id/thursday_group_start_time_two"
                 app:layout_constraintTop_toBottomOf="@id/thursday_group_name_two" />
@@ -183,10 +185,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/start_time"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_four" />
+                app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_four"
+                app:layout_constraintVertical_bias="0.063" />
 
             <TextView
                 android:id="@+id/thursday_group_name_four"
@@ -194,13 +200,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="10dp"
                 android:text="@string/group_name"
                 android:textColor="@android:color/black"
-                app:layout_constraintBottom_toBottomOf="@id/thursday_group_start_time_three"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/thursday_group_start_time_four"
-                app:layout_constraintVertical_bias="0.591" />
+                app:layout_constraintTop_toBottomOf="@+id/dash_three" />
 
             <TextView
                 android:id="@+id/dash_four"
@@ -209,22 +213,31 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/dash"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/thursday_group_end_time_four"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/thursday_group_start_time_four"
-                app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_four" />
+                app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_four"
+                app:layout_constraintVertical_bias="0.021" />
 
             <TextView
                 android:id="@+id/thursday_group_end_time_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                android:layout_marginEnd="124dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="108dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/end_time"
                 android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/thursday_group_end_time_two" />
+                app:layout_constraintTop_toBottomOf="@+id/thursday_group_name_four"
+                app:layout_constraintVertical_bias="0.021" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -236,9 +249,21 @@
         android:fontFamily="@font/amarante"
         android:textColor="@android:color/black"
         android:text="@string/thursday_schedule"
+        android:shadowColor="@color/appBlue"
+        android:shadowRadius="4"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/thursday_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/appBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,15 +33,15 @@ public class MondayActivity extends AppCompatActivity {
 
         /* Explicitly indexing the database objects */
         List<Groups> groupsList = db.getAllMondayGroups();
-        mondayGroupNameOne.setText(groupsList.get(9).getGroupDay());
-        mondayGroupStartTimeOne.setText(groupsList.get(9).getGroupStartTime());
-        mondayGroupEndTimeOne.setText(groupsList.get(9).getGroupEndTime());
-        mondayGroupNameTwo.setText(groupsList.get(10).getGroupDay());
-        mondayGroupStartTimeTwo.setText(groupsList.get(10).getGroupStartTime());
-        mondayGroupEndTimeTwo.setText(groupsList.get(10).getGroupEndTime());
-        mondayGroupNameThree.setText(groupsList.get(11).getGroupDay());
-        mondayGroupStartTimeThree.setText(groupsList.get(11).getGroupStartTime());
-        mondayGroupEndTimeThree.setText(groupsList.get(11).getGroupEndTime());
+        mondayGroupNameOne.setText(groupsList.get(0).getGroupDay());
+        mondayGroupStartTimeOne.setText(groupsList.get(0).getGroupStartTime());
+        mondayGroupEndTimeOne.setText(groupsList.get(0).getGroupEndTime());
+        mondayGroupNameTwo.setText(groupsList.get(1).getGroupDay());
+        mondayGroupStartTimeTwo.setText(groupsList.get(1).getGroupStartTime());
+        mondayGroupEndTimeTwo.setText(groupsList.get(1).getGroupEndTime());
+        mondayGroupNameThree.setText(groupsList.get(2).getGroupDay());
+        mondayGroupStartTimeThree.setText(groupsList.get(2).getGroupStartTime());
+        mondayGroupEndTimeThree.setText(groupsList.get(2).getGroupEndTime());
 
         /* List and log all groups for debugging */
 //        for(Groups groups: groupsList) {

@@ -15,19 +15,18 @@ import com.wesleyruede.rest.ui.daysoftheweek.TuesdayActivity;
 import com.wesleyruede.rest.ui.daysoftheweek.WednesdayActivity;
 
 public class ScheduleActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button mondayButton,tuesdayButton,wednesdayButton,thursdayButton,fridayButton,saturdayButton,sundayButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        mondayButton = findViewById(R.id.monday_button);
-        tuesdayButton = findViewById(R.id.tuesday_button);
-        wednesdayButton = findViewById(R.id.wednesday_button);
-        thursdayButton = findViewById(R.id.thursday_button);
-        fridayButton = findViewById(R.id.friday_button);
-        saturdayButton = findViewById(R.id.saturday_button);
-        sundayButton = findViewById(R.id.sunday_button);
+        Button mondayButton = findViewById(R.id.monday_button);
+        Button tuesdayButton = findViewById(R.id.tuesday_button);
+        Button wednesdayButton = findViewById(R.id.wednesday_button);
+        Button thursdayButton = findViewById(R.id.thursday_button);
+        Button fridayButton = findViewById(R.id.friday_button);
+        Button saturdayButton = findViewById(R.id.saturday_button);
+        Button sundayButton = findViewById(R.id.sunday_button);
         mondayButton.setOnClickListener(this);
         tuesdayButton.setOnClickListener(this);
         wednesdayButton.setOnClickListener(this);
