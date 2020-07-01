@@ -34,6 +34,11 @@ Target SDK - 29 (Android 10.0 >1% of all devices)<br/>
 5. Quiz -- None
 6. Triva -- internet
 
+# Learning 
+
+1. Unit Testing in Android
+
+
 ## Notes
 
 10/29/19 -- For easy install download ListApp_1.0.apk [here](www.website.com).
@@ -70,3 +75,5 @@ the works to clean up the repo. I'll be coming back around for FireStore in the 
 04/13/20 -- The REST app's database is complete!
 
 05/21/20 -- The REST app's Activities are now settled. I was struggling on correctly implmenting my code to access database for the view. Thanks to StackOverFlow I was able to solve the issue and progress is coming along beautifully. Now to design the ui.
+
+06/30/21 -- The REST app is finished and I still can't believe how nicely it came out. Truly, I'm very proud of myself. Not only myself but also the people on StackOverFlow who helped me solve the bugs I ran into. This app likely would have never gotten done without their help. Also a big shoutout to my lady who held with some ui design ideas. My ui design was ugly at best and not really functional. I learned how to use bottom app bars and working with other people has gotten great results. Were I alone through this whole thing the app would likely not be in the state it is. Finally all I need to do is introcude unit testing which I'm learning right now. In future iterations I'll consider either adding a recovery trivia/learning functionality and improving the ui further. Till next, Wes.

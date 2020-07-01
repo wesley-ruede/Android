@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">TestThree</string>
-    <string name="item_one">Item one</string>
-    <string name="item_two">Item two</string>
-    <string name="item_three">Item three</string>
-    <string name="item">Item</string>
-</resources>

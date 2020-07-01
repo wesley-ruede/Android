@@ -2,9 +2,13 @@ package com.wesleyruede.rest.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.wesleyruede.rest.MainActivity;
 import com.wesleyruede.rest.R;
 import com.wesleyruede.rest.ui.daysoftheweek.FridayActivity;
 import com.wesleyruede.rest.ui.daysoftheweek.MondayActivity;
@@ -34,6 +38,21 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         fridayButton.setOnClickListener(this);
         saturdayButton.setOnClickListener(this);
         sundayButton.setOnClickListener(this);
+        BottomNavigationView scheduleBottomNav = findViewById(R.id.schedule_nav);
+        scheduleBottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.home_nav:
+                        Intent scheduleHomeNav = new Intent(ScheduleActivity.this, MainActivity.class);
+                        startActivity(scheduleHomeNav);
+                        return true;
+                    case R.id.schedule_nav:
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -62,9 +81,11 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
             case R.id.saturday_button:
                 Intent saturday_intent = new Intent(ScheduleActivity.this, SaturdayActivity.class);
                 startActivity(saturday_intent);
+                break;
             case R.id.sunday_button:
                 Intent sunday_intent = new Intent(ScheduleActivity.this, SundayActivity.class);
                 startActivity(sunday_intent);
+                break;
         }
     }
 }

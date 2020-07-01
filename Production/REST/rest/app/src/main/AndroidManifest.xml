@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/rest_logo_update_1"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".ui.daysoftheweek.SundayActivity"/>
-        <activity android:name=".ui.daysoftheweek.SaturdayActivity" />
-        <activity android:name=".ui.daysoftheweek.FridayActivity" />
-        <activity android:name=".ui.daysoftheweek.ThursdayActivity" />
-        <activity android:name=".ui.daysoftheweek.WednesdayActivity" />
-        <activity android:name=".ui.daysoftheweek.TuesdayActivity" />
-        <activity android:name=".ui.daysoftheweek.MondayActivity" />
-        <activity android:name=".ui.ScheduleActivity"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.daysoftheweek.SundayActivity" android:noHistory="true"/>
+        <activity android:name=".ui.daysoftheweek.SaturdayActivity" android:noHistory="true"/>
+        <activity android:name=".ui.daysoftheweek.FridayActivity" android:noHistory="true"/>
+        <activity android:name=".ui.daysoftheweek.ThursdayActivity" android:noHistory="true"/>
+        <activity android:name=".ui.daysoftheweek.WednesdayActivity" android:noHistory="true"/>
+        <activity android:name=".ui.daysoftheweek.TuesdayActivity" android:noHistory="true"/>
+        <activity android:name=".ui.daysoftheweek.MondayActivity" android:noHistory="true"/>
+        <activity android:name=".ui.ScheduleActivity" android:noHistory="true"/>
+        <activity android:name=".MainActivity" android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

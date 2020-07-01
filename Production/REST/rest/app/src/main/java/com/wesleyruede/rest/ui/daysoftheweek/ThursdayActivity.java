@@ -44,18 +44,19 @@ public class ThursdayActivity extends AppCompatActivity {
         BottomNavigationView thursdayNavBar = findViewById(R.id.thursday_bottom_nav);
         /* Explicitly indexing the database objects */
         List<Groups> groupsList = db.getAllThursdayGroups();
-        thursdayGroupNameOne.setText(groupsList.get(0).getGroupDay());
+        thursdayGroupNameOne.setText(groupsList.get(0).getGroupName());
         thursdayGroupStartTimeOne.setText(groupsList.get(0).getGroupStartTime());
         thursdayGroupEndTimeOne.setText(groupsList.get(0).getGroupEndTime());
-        thursdayGroupNameTwo.setText(groupsList.get(1).getGroupDay());
+        thursdayGroupNameTwo.setText(groupsList.get(1).getGroupName());
         thursdayGroupStartTimeTwo.setText(groupsList.get(1).getGroupStartTime());
         thursdayGroupEndTimeTwo.setText(groupsList.get(1).getGroupEndTime());
-        thursdayGroupNameThree.setText(groupsList.get(2).getGroupDay());
+        thursdayGroupNameThree.setText(groupsList.get(2).getGroupName());
         thursdayGroupStartTimeThree.setText(groupsList.get(2).getGroupStartTime());
         thursdayGroupEndTimeThree.setText(groupsList.get(2).getGroupEndTime());
-        thursdayGroupNameFour.setText(groupsList.get(3).getGroupDay());
+        thursdayGroupNameFour.setText(groupsList.get(3).getGroupName());
         thursdayGroupStartTimeFour.setText(groupsList.get(3).getGroupStartTime());
         thursdayGroupEndTimeFour.setText(groupsList.get(3).getGroupEndTime());
+
         thursdayNavBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
